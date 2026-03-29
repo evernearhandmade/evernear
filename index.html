@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ever Near — Handcrafted Cosmetic Bags</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Cormorant+Upright:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-left">
+    <button class="menu-btn" id="menuBtn" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="search-wrap">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
+      <input class="search-input" type="text" placeholder="Search"/>
+    </div>
+  </div>
+  <button class="cart-btn" onclick="toggleCart()">
+    <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+    My Cart
+    <span class="cart-badge" id="cart-badge">0</span>
+  </button>
+</nav>
+
+<div class="dropdown-overlay" id="dropdown">
+  <p class="dropdown-label">Shop</p>
+  <ul class="dropdown-links">
+    <li><a href="#" onclick="navTo('classic');closeMenu();">The Classic Collection</a></li>
+    <li><a href="#" onclick="navTo('gingham');closeMenu();">The Gingham Collection</a></li>
+    <li><a href="#" onclick="navTo('garden');closeMenu();">The Garden Collection</a></li>
+    <li><a href="#" onclick="navTo('essentials');closeMenu();">Ever Essentials</a></li>
+    <li><a href="#" onclick="navTo('classic');closeMenu();">Shop All</a></li>
+  </ul>
+</div>
+
+<!-- ══ MAIN PAGE ══ -->
+<div id="main-page" class="page active">
+
+  <!-- HERO -->
+  <section class="hero">
+    <img src="img/logo.png" alt="Ever Near" class="hero-logo"/>
+    <p class="hero-subtitle">Handmade in Southern California</p>
+    <div class="hero-divider"></div>
+    <p class="hero-tagline">Handcrafted &nbsp;·&nbsp; Small Batch &nbsp;·&nbsp; Made with Love</p>
+    <button class="btn-primary" onclick="navTo('classic')">Shop the Collection</button>
+  </section>
+
+  <!-- CLASSIC COLLECTION -->
+  <div class="shop-section bg-main" id="classic">
+    <div class="section-inner">
+      <p class="section-eyebrow">Collection No. 1</p>
+      <h2 class="section-title">The Classic Collection</h2>
+      <div class="section-divider"></div>
+      <div class="product-grid">
+        <div class="product-card fade-in" onclick="openProduct('midnight-dot')">
+          <div class="product-carousel">
+            <div class="carousel-track" id="track-0">
+              <div class="carousel-slide"><img src="img/midnight-dot-1.jpg" alt="Midnight Dot"/></div>
+              <div class="carousel-slide"><img src="img/midnight-dot-2.jpg" alt="Midnight Dot sizes"/></div>
+            </div>
+            <button class="carousel-btn prev" onclick="event.stopPropagation();slide(0,-1)">&#8249;</button>
+            <button class="carousel-btn next" onclick="event.stopPropagation();slide(0,1)">&#8250;</button>
+          </div>
+          <div class="carousel-dots" id="dots-0">
+            <span class="dot active" onclick="event.stopPropagation();goTo(0,0)"></span>
+            <span class="dot" onclick="event.stopPropagation();goTo(0,1)"></span>
+          </div>
+          <div class="product-info">
+            <div class="product-meta-row">
+              <span class="product-sizes">Le Classique &nbsp;·&nbsp; Le Voyage</span>
+              <span class="product-price">From $45</span>
+            </div>
+            <p class="product-name">Midnight Dot</p>
+          </div>
+        </div>
+        <div class="product-card fade-in" onclick="openProduct('ivory-dot')">
+          <div class="product-carousel">
+            <div class="carousel-track" id="track-1">
+              <div class="carousel-slide"><img src="img/ivory-dot-1.jpg" alt="Ivory Dot"/></div>
+              <div class="carousel-slide"><img src="img/ivory-dot-2.jpg" alt="Ivory Dot sizes"/></div>
+            </div>
+            <button class="carousel-btn prev" onclick="event.stopPropagation();slide(1,-1)">&#8249;</button>
+            <button class="carousel-btn next" onclick="event.stopPropagation();slide(1,1)">&#8250;</button>
+          </div>
+          <div class="carousel-dots" id="dots-1">
+            <span class="dot active" onclick="event.stopPropagation();goTo(1,0)"></span>
+            <span class="dot" onclick="event.stopPropagation();goTo(1,1)"></span>
+          </div>
+          <div class="product-info">
+            <div class="product-meta-row">
+              <span class="product-sizes">Le Classique &nbsp;·&nbsp; Le Voyage</span>
+              <span class="product-price">From $45</span>
+            </div>
+            <p class="product-name">Ivory Dot</p>
+          </div>
+        </div>
+        <div class="product-card fade-in" onclick="openProduct('cherry-blossom')">
+          <div class="product-carousel">
+            <div class="carousel-track" id="track-2">
+              <div class="carousel-slide"><img src="img/cherry-blossom-1.jpg" alt="Cherry Blossom"/></div>
+              <div class="carousel-slide"><img src="img/cherry-blossom-2.jpg" alt="Cherry Blossom open"/></div>
+            </div>
+            <button class="carousel-btn prev" onclick="event.stopPropagation();slide(2,-1)">&#8249;</button>
+            <button class="carousel-btn next" onclick="event.stopPropagation();slide(2,1)">&#8250;</button>
+          </div>
+          <div class="carousel-dots" id="dots-2">
+            <span class="dot active" onclick="event.stopPropagation();goTo(2,0)"></span>
+            <span class="dot" onclick="event.stopPropagation();goTo(2,1)"></span>
+          </div>
+          <div class="product-info">
+            <div class="product-meta-row">
+              <span class="product-sizes">Le Classique &nbsp;·&nbsp; Le Voyage</span>
+              <span class="product-price">From $45</span>
+            </div>
+            <p class="product-name">Cherry Blossom</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GINGHAM COLLECTION -->
+  <div class="shop-section bg-tint" id="gingham">
+    <div class="section-inner">
+      <p class="section-eyebrow">Collection No. 2</p>
+      <h2 class="section-title">The Gingham Collection</h2>
+      <div class="section-divider"></div>
+      <div class="product-grid">
+        <div class="product-card fade-in" onclick="openProduct('blueberry')">
+          <div class="product-carousel"><div class="carousel-track" id="track-3"><div class="carousel-slide"><img src="img/blueberry-1.jpg" alt="Blueberry"/></div></div></div>
+          <div class="product-info">
+            <div class="product-meta-row"><span class="product-sizes">Le Classique</span><span class="product-price">$46</span></div>
+            <p class="product-name">Blueberry</p>
+          </div>
+        </div>
+        <div class="product-card fade-in" onclick="openProduct('strawberry-shortcake')">
+          <div class="product-carousel"><div class="carousel-track" id="track-4"><div class="carousel-slide"><img src="img/strawberry-shortcake-1.jpg" alt="Strawberry Shortcake"/></div></div></div>
+          <div class="product-info">
+            <div class="product-meta-row"><span class="product-sizes">Le Classique</span><span class="product-price">$46</span></div>
+            <p class="product-name">Strawberry Shortcake</p>
+          </div>
+        </div>
+        <div class="product-card fade-in" onclick="openProduct('vanilla-creme')">
+          <div class="product-carousel"><div class="carousel-track" id="track-5"><div class="carousel-slide"><img src="img/vanilla-creme-1.jpg" alt="Vanilla Crème"/></div></div></div>
+          <div class="product-info">
+            <div class="product-meta-row"><span class="product-sizes">Le Classique</span><span class="product-price">$46</span></div>
+            <p class="product-name">Vanilla Crème</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GARDEN COLLECTION -->
+  <div class="shop-section bg-main" id="garden">
+    <div class="section-inner">
+      <p class="section-eyebrow">Collection No. 3</p>
+      <h2 class="section-title">The Garden Collection</h2>
+      <div class="section-divider"></div>
+      <div class="product-grid">
+        <div class="product-card fade-in" onclick="openProduct('bluebell-garden')">
+          <div class="product-carousel">
+            <div class="carousel-track" id="track-6">
+              <div class="carousel-slide"><img src="img/bluebell-garden-classique.jpg" alt="Bluebell Le Classique"/></div>
+              <div class="carousel-slide"><img src="img/bluebell-garden-essentials.jpg" alt="Bluebell Le Essentials"/></div>
+            </div>
+            <button class="carousel-btn prev" onclick="event.stopPropagation();slide(6,-1)">&#8249;</button>
+            <button class="carousel-btn next" onclick="event.stopPropagation();slide(6,1)">&#8250;</button>
+          </div>
+          <div class="carousel-dots" id="dots-6">
+            <span class="dot active" onclick="event.stopPropagation();goTo(6,0)"></span>
+            <span class="dot" onclick="event.stopPropagation();goTo(6,1)"></span>
+          </div>
+          <div class="product-info">
+            <div class="product-meta-row"><span class="product-sizes">Le Classique &nbsp;·&nbsp; Le Essentials</span><span class="product-price">From $32</span></div>
+            <p class="product-name">Bluebell</p>
+          </div>
+        </div>
+        <div class="product-card fade-in" onclick="openProduct('petal-garden')">
+          <div class="product-carousel">
+            <div class="carousel-track" id="track-7">
+              <div class="carousel-slide"><img src="img/petal-garden-classique.jpg" alt="Petal Le Classique"/></div>
+              <div class="carousel-slide"><img src="img/petal-garden-essentials.jpg" alt="Petal Le Essentials"/></div>
+            </div>
+            <button class="carousel-btn prev" onclick="event.stopPropagation();slide(7,-1)">&#8249;</button>
+            <button class="carousel-btn next" onclick="event.stopPropagation();slide(7,1)">&#8250;</button>
+          </div>
+          <div class="carousel-dots" id="dots-7">
+            <span class="dot active" onclick="event.stopPropagation();goTo(7,0)"></span>
+            <span class="dot" onclick="event.stopPropagation();goTo(7,1)"></span>
+          </div>
+          <div class="product-info">
+            <div class="product-meta-row"><span class="product-sizes">Le Classique &nbsp;·&nbsp; Le Essentials</span><span class="product-price">From $32</span></div>
+            <p class="product-name">Petal</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EVER ESSENTIALS -->
+  <div class="shop-section bg-tint" id="essentials">
+    <div class="section-inner">
+      <p class="section-eyebrow">Collection No. 4</p>
+      <h2 class="section-title">Ever Essentials</h2>
+      <div class="section-divider"></div>
+      <div class="product-grid-4">
+        <div class="product-card fade-in" onclick="openProduct('pink')">
+          <div class="product-carousel"><div class="carousel-track" id="track-8"><div class="carousel-slide"><img src="img/pink-1.jpg" alt="Pink"/></div></div></div>
+          <div class="product-info"><div class="product-meta-row"><span class="product-sizes">Le Essentials</span><span class="product-price">$32</span></div><p class="product-name">Pink</p></div>
+        </div>
+        <div class="product-card fade-in" onclick="openProduct('sorbet')">
+          <div class="product-carousel"><div class="carousel-track" id="track-9"><div class="carousel-slide"><img src="img/sorbet-1.jpg" alt="Sorbet"/></div></div></div>
+          <div class="product-info"><div class="product-meta-row"><span class="product-sizes">Le Essentials</span><span class="product-price">$32</span></div><p class="product-name">Sorbet</p></div>
+        </div>
+        <div class="product-card fade-in" onclick="openProduct('bluebell-essential')">
+          <div class="product-carousel"><div class="carousel-track" id="track-10"><div class="carousel-slide"><img src="img/bluebell-garden-essentials.jpg" alt="Bluebell"/></div></div></div>
+          <div class="product-info"><div class="product-meta-row"><span class="product-sizes">Le Essentials</span><span class="product-price">$32</span></div><p class="product-name">Bluebell</p></div>
+        </div>
+        <div class="product-card fade-in" onclick="openProduct('petal-essential')">
+          <div class="product-carousel"><div class="carousel-track" id="track-11"><div class="carousel-slide"><img src="img/petal-garden-essentials.jpg" alt="Petal"/></div></div></div>
+          <div class="product-info"><div class="product-meta-row"><span class="product-sizes">Le Essentials</span><span class="product-price">$32</span></div><p class="product-name">Petal</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <div class="about-section" id="about">
+    <div class="section-inner">
+      <p class="section-eyebrow">Our Story</p>
+      <h2 class="section-title">Made with love in Southern California</h2>
+      <div class="section-divider"></div>
+      <div class="about-text fade-in">
+        <p>Ever Near came from a simple realization: even before I knew God, He was always there.</p>
+        <p>I wasn't raised Christian, but as I've grown closer in my faith, I've started to look back and see things differently. Moments that felt random now feel guided. Things that once felt uncertain feel a little more held. Ever Near is a reminder of that.</p>
+        <p>This brand is also inspired by the everyday things I've always loved — getting ready, the small items we keep close, and the comfort in those little details. The pieces are made to be part of your daily life, holding what you need while feeling personal and familiar.</p>
+        <p>Ever Near is about faith, femininity, and the quiet ways both show up in our lives — always close, always with you.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <img src="img/logo.png" alt="Ever Near" class="footer-logo"/>
+    <ul class="footer-links">
+      <li><a onclick="navTo('classic')">Classic</a></li>
+      <li><a onclick="navTo('gingham')">Gingham</a></li>
+      <li><a onclick="navTo('garden')">Garden</a></li>
+      <li><a onclick="navTo('essentials')">Essentials</a></li>
+      <li><a onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">About</a></li>
+    </ul>
+    <p class="footer-copy">&copy; 2026 Ever Near. All rights reserved.</p>
+  </footer>
+
+</div><!-- end main-page -->
+
+<!-- ══ PRODUCT PAGE ══ -->
+<div id="product-page" class="page">
+  <div class="product-page-inner">
+    <button class="product-page-back" onclick="closeProduct()">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      Back
+    </button>
+    <div class="product-page-layout">
+      <div class="pp-gallery">
+        <img id="pp-main-img" class="pp-main-img" src="" alt=""/>
+        <div class="pp-thumbs" id="pp-thumbs"></div>
+      </div>
+      <div class="pp-info">
+        <p class="pp-collection" id="pp-collection"></p>
+        <h1 class="pp-name" id="pp-name"></h1>
+        <p class="pp-price" id="pp-price"></p>
+        <div class="pp-divider"></div>
+        <p class="pp-size-label">Select Size</p>
+        <div class="pp-sizes" id="pp-sizes"></div>
+        <p class="pp-description" id="pp-description"></p>
+        <p class="pp-dimensions-label">Dimensions</p>
+        <p class="pp-dimensions" id="pp-dimensions"></p>
+        <p class="pp-details" id="pp-details"></p>
+        <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+        <p class="cart-confirm" id="cart-confirm">Added to your cart ✓</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ CART DRAWER ══ -->
+<div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cart-drawer">
+  <div class="cart-drawer-header">
+    <div>
+      <span class="cart-drawer-title">Your Cart</span>
+      <span class="cart-drawer-count" id="cart-drawer-count"></span>
+    </div>
+    <button class="cart-drawer-close" onclick="closeCart()" aria-label="Close cart">
+      <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="cart-drawer-items" id="cart-drawer-items"></div>
+  <div class="cart-drawer-footer" id="cart-drawer-footer" style="display:none;">
+    <div class="cart-subtotal">
+      <span class="cart-subtotal-label">Subtotal</span>
+      <span class="cart-subtotal-amount" id="cart-subtotal">$0</span>
+    </div>
+    <p class="cart-shipping-note">Shipping calculated at checkout</p>
+    <button class="cart-checkout-btn" id="cart-checkout-btn" onclick="initiateCheckout()">Checkout</button>
+  </div>
+</div>
+
+  <script src="js/config.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/shopify-api.js"></script>
+  <script src="js/carousel.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/product-detail.js"></script>
+  <script src="js/product-listing.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

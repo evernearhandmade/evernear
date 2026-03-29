@@ -1,0 +1,26 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+
+# Word temp files
+~$*
+
+# Build artifacts
+node_modules/
+
+# Build/migration scripts (one-time use)
+generate_docx.py
+extract_images.py
+build_project.py
+ever_near_extracted.html
+
+# Original monolithic HTML (preserved in git history, not needed going forward)
+ever_near.html
+
+# Documentation (keep markdown in repo, ignore generated formats)
+*.docx
