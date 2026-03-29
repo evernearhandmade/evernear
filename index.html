@@ -36,6 +36,7 @@
     <li><a href="#" onclick="navTo('garden');closeMenu();">The Garden Collection</a></li>
     <li><a href="#" onclick="navTo('essentials');closeMenu();">Ever Essentials</a></li>
     <li><a href="#" onclick="navTo('classic');closeMenu();">Shop All</a></li>
+    <li><a href="#" onclick="showPage('contact-page');closeMenu();">Contact</a></li>
   </ul>
 </div>
 
@@ -254,6 +255,7 @@
       <li><a onclick="navTo('garden')">Garden</a></li>
       <li><a onclick="navTo('essentials')">Essentials</a></li>
       <li><a onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">About</a></li>
+      <li><a onclick="showPage('contact-page')">Contact</a></li>
     </ul>
     <p class="footer-copy">&copy; 2026 Ever Near. All rights reserved.</p>
   </footer>
@@ -285,6 +287,27 @@
         <p class="pp-details" id="pp-details"></p>
         <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
         <p class="cart-confirm" id="cart-confirm">Added to your cart ✓</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ CONTACT PAGE ══ -->
+<div id="contact-page" class="page">
+  <div class="contact-inner">
+    <button class="product-page-back" onclick="showPage('main-page')">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      Back
+    </button>
+    <div class="contact-content">
+      <p class="section-eyebrow">Say Hello</p>
+      <h2 class="section-title">Get in Touch</h2>
+      <div class="section-divider"></div>
+      <div class="contact-text">
+        <p>Whether you have a question, are interested in a custom order, or just want to say hello — we'd love to hear from you.</p>
+        <p class="contact-email-label">Reach us at</p>
+        <a href="mailto:evernear.co@gmail.com" class="contact-email">evernear.co@gmail.com</a>
+        <p class="contact-note">We'll do our best to get back to you within 24–48 hours.</p>
       </div>
     </div>
   </div>

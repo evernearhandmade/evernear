@@ -139,6 +139,17 @@
     .footer-links a:hover{opacity:0.9;}
     .footer-copy{font-family:'EB Garamond',serif;font-size:0.68rem;letter-spacing:0.1em;opacity:0.3;}
 
+    /* CONTACT PAGE */
+    #contact-page{padding-top:62px;min-height:100vh;background:var(--bg);}
+    .contact-inner{max-width:680px;margin:0 auto;padding:60px 24px 100px;}
+    .contact-content{text-align:center;}
+    .contact-text{max-width:520px;margin:0 auto;}
+    .contact-text p{font-family:'EB Garamond',serif;font-size:1.05rem;line-height:1.85;color:var(--muted);margin-bottom:24px;}
+    .contact-email-label{font-family:'EB Garamond',serif;font-size:0.72rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--taupe);margin-bottom:8px !important;}
+    .contact-email{display:inline-block;font-family:'Cormorant Upright',serif;font-size:1.6rem;font-weight:400;font-style:italic;color:var(--charcoal);text-decoration:none;letter-spacing:0.02em;transition:color 0.2s;margin-bottom:28px;}
+    .contact-email:hover{color:var(--taupe);}
+    .contact-note{font-family:'EB Garamond',serif;font-size:0.88rem;color:var(--taupe);letter-spacing:0.04em;}
+
     .fade-in{opacity:0;transform:translateY(24px);transition:opacity 0.8s ease,transform 0.8s ease;}
     .fade-in.visible{opacity:1;transform:translateY(0);}
 
