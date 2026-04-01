@@ -78,6 +78,9 @@
     .dot{width:5px;height:5px;border-radius:50%;background:var(--taupe);opacity:0.35;cursor:pointer;transition:opacity 0.2s;}
     .dot.active{opacity:1;}
 
+    /* Sold out badge */
+    .sold-out-badge{position:absolute;bottom:16px;left:16px;background:var(--charcoal);color:var(--bg);font-family:'Cormorant Upright',serif;font-size:1rem;font-style:italic;font-weight:400;padding:6px 18px;letter-spacing:0.04em;z-index:3;}
+
     .product-info{padding:18px 2px 0;}
     .product-meta-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:5px;}
     .product-sizes{font-family:'EB Garamond',serif;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--taupe);}
@@ -122,6 +125,8 @@
     .add-to-cart-btn{width:100%;padding:16px;background:var(--charcoal);color:var(--bg);font-family:'EB Garamond',serif;font-size:0.82rem;letter-spacing:0.22em;text-transform:uppercase;border:none;cursor:pointer;transition:opacity 0.25s;}
     .add-to-cart-btn:hover{opacity:0.85;}
     .add-to-cart-btn:active{opacity:0.7;}
+    .add-to-cart-btn.out-of-stock{background:var(--taupe);cursor:not-allowed;opacity:0.6;}
+    .add-to-cart-btn.out-of-stock:hover{opacity:0.6;}
     .cart-confirm{display:none;text-align:center;margin-top:14px;font-family:'EB Garamond',serif;font-size:0.85rem;letter-spacing:0.1em;color:var(--taupe);}
     .cart-confirm.show{display:block;}
 

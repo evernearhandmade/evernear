@@ -55,6 +55,9 @@ function buildProductCard(product) {
     carouselHtml += '<button class="carousel-btn prev" onclick="event.stopPropagation();slide(' + cid + ',-1)">&#8249;</button>';
     carouselHtml += '<button class="carousel-btn next" onclick="event.stopPropagation();slide(' + cid + ',1)">&#8250;</button>';
   }
+  if (!product.availableForSale) {
+    carouselHtml += '<span class="sold-out-badge">Sold out</span>';
+  }
   carouselHtml += '</div>';
 
   // Dots
@@ -162,6 +165,7 @@ function normalizeApiProduct(node) {
     price: priceDisplay,
     dimensions: dimensions,
     details: details,
+    availableForSale: node.availableForSale,
     hasRealVariants: hasRealVariants,
     fromApi: true,
   };
@@ -209,6 +213,7 @@ function normalizeStaticProduct(slug, data) {
     price: data.price,
     dimensions: data.dimensions,
     details: data.details,
+    availableForSale: true,
     collection: data.collection,
     fromApi: false,
   };

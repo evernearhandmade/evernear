@@ -153,6 +153,18 @@ function openProduct(handle) {
     });
   }
 
+  // Handle sold out state
+  var cartBtn = document.querySelector('.add-to-cart-btn');
+  if (!p.availableForSale) {
+    cartBtn.textContent = 'Out of Stock';
+    cartBtn.classList.add('out-of-stock');
+    cartBtn.disabled = true;
+  } else {
+    cartBtn.textContent = 'Add to Cart';
+    cartBtn.classList.remove('out-of-stock');
+    cartBtn.disabled = false;
+  }
+
   document.getElementById('cart-confirm').classList.remove('show');
   showPage('product-page');
 }
