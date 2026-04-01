@@ -5,7 +5,7 @@ const PRODUCTS = {
     sizes: 'Le Classique · Le Voyage',
     price: 'From $45',
     images: ["img/midnight-dot-1.jpg","img/midnight-dot-2.jpg"],
-    description: 'Bold, classic, and timeless. The Midnight Dot features a striking black fabric with oversized white polka dots, finished with an eyelet lace trim along the zipper. Each bag is carefully cut and sewn by hand in Southern California.',
+    description: '',
     dimensions: 'Le Classique (Medium): 8"W × 5"H × 5"D<br>Le Voyage (Large): 9"W × 6"H × 7"D',
     details: 'Lined interior · Zipper closure · Quilted fabric · Handmade in SoCal'
   },
@@ -15,7 +15,7 @@ const PRODUCTS = {
     sizes: 'Le Classique · Le Voyage',
     price: 'From $45',
     images: ["img/ivory-dot-1.jpg","img/ivory-dot-2.jpg"],
-    description: "A lighter take on the classic dot. Ivory with small black polka dots creates a crisp, effortless look — the kind of bag that feels at home whether you're traveling or getting ready at your vanity.",
+    description: '',
     dimensions: 'Le Classique (Medium): 8"W × 5"H × 5"D<br>Le Voyage (Large): 9"W × 6"H × 7"D',
     details: 'Lined interior · Zipper closure · Quilted fabric · Handmade in SoCal'
   },
@@ -25,7 +25,7 @@ const PRODUCTS = {
     sizes: 'Le Classique · Le Voyage',
     price: 'From $45',
     images: ["img/cherry-blossom-1.jpg","img/cherry-blossom-2.jpg"],
-    description: 'A celebration of bloom. The Cherry Blossom bag features a playful cherry and floral print on a crisp striped base, finished with white eyelet lace and a red zipper for a charming, feminine touch.',
+    description: '',
     dimensions: 'Le Classique (Medium): 8"W × 5"H × 5"D<br>Le Voyage (Large): 9"W × 6"H × 7"D',
     details: 'Lined interior · Red zipper · Eyelet lace trim · Handmade in SoCal'
   },
@@ -35,7 +35,7 @@ const PRODUCTS = {
     sizes: 'Le Classique',
     price: '$46',
     images: ["img/blueberry-1.jpg"],
-    description: 'Soft blue gingham with delicate white eyelet lace trim and a white zipper. The Blueberry is a dreamy, Parisian-inspired piece that brings a little joy to every morning routine.',
+    description: '',
     dimensions: 'Le Classique (Medium): 8"W × 5"H × 5"D',
     details: 'Lined interior · White zipper · Eyelet lace trim · Handmade in SoCal'
   },
@@ -45,7 +45,7 @@ const PRODUCTS = {
     sizes: 'Le Classique',
     price: '$46',
     images: ["img/strawberry-shortcake-1.jpg"],
-    description: 'Sweet and bold — red gingham with white eyelet lace trim and a clean white zipper. The Strawberry Shortcake is made for the girl who loves a little color in her everyday essentials.',
+    description: '',
     dimensions: 'Le Classique (Medium): 8"W × 5"H × 5"D',
     details: 'Lined interior · White zipper · Eyelet lace trim · Handmade in SoCal'
   },
@@ -55,7 +55,7 @@ const PRODUCTS = {
     sizes: 'Le Classique',
     price: '$46',
     images: ["img/vanilla-creme-1.jpg"],
-    description: 'Neutral, soft, and effortlessly elegant. The Vanilla Crème features a warm beige gingham with white eyelet lace and a cream zipper — a piece that pairs with everything and feels like a quiet luxury.',
+    description: '',
     dimensions: 'Le Classique (Medium): 8"W × 5"H × 5"D',
     details: 'Lined interior · Cream zipper · Eyelet lace trim · Handmade in SoCal'
   },
@@ -102,21 +102,31 @@ const PRODUCTS = {
   "bluebell-garden": {
     name: 'Bluebell',
     collection: 'The Garden Collection',
-    sizes: 'Le Classique · Le Essentials',
+    sizes: 'Le Classique',
     price: 'From $32',
     images: ["img/bluebell-garden-classique.jpg","img/bluebell-garden-essentials.jpg"],
-    description: 'Soft and serene — tiny blue flowers scattered across white quilted fabric, with white eyelet lace trim and a gentle zipper. The Bluebell is made for the girl who finds beauty in quiet, delicate things.',
-    dimensions: 'Le Classique (Medium): 8"W × 5"H × 5"D<br>Le Essentials (Small): 7"W × 5"H × 2"D',
+    description: '',
+    dimensions: 'Le Classique (Medium): 8"W × 5"H × 5"D',
     details: 'Quilted double-gauze · Lined interior · Eyelet lace trim · Handmade in SoCal'
   },
   "petal-garden": {
     name: 'Petal',
     collection: 'The Garden Collection',
-    sizes: 'Le Classique · Le Essentials',
+    sizes: 'Le Classique',
     price: 'From $32',
     images: ["img/petal-garden-classique.jpg","img/petal-garden-essentials.jpg"],
-    description: 'White lace stripes and hand-stitched botanicals — the Petal is a piece that feels like a garden in the morning light. Made from a textured lace-stripe fabric with embroidered green florals and a delicate zipper.',
-    dimensions: 'Le Classique (Medium): 8"W × 5"H × 5"D<br>Le Essentials (Small): 7"W × 5"H × 2"D',
+    description: '',
+    dimensions: 'Le Classique (Medium): 8"W × 5"H × 5"D',
     details: 'Embroidered lace fabric · Lined interior · Fabric zipper bow · Handmade in SoCal'
+  },
+  "cherry-blossom-le-essentials": {
+    name: 'Cherry Blossom',
+    collection: 'Ever Essentials',
+    sizes: 'Le Essentials',
+    price: '$32',
+    images: ["img/cherry-blossom-1.jpg"],
+    description: '<strong>A celebration of bloom for your everyday essentials ✿</strong><br><br>A playful cherry and floral print on a crisp striped base — this compact pouch is thoughtfully handmade in small batches, perfect for holding your daily go-to items.<br><br><strong>✿ Details:</strong><br>– Handmade in California<br>– Cotton exterior<br>– Fully lined interior<br>– Lightweight yet structured<br>– Zipper closure',
+    dimensions: 'Le Essentials (Small): 7"W × 5"H × 2"D',
+    details: ''
   },
 };
