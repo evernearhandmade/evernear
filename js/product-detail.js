@@ -48,7 +48,7 @@ function openProduct(handle) {
   document.getElementById('pp-collection').textContent = collectionName;
   document.getElementById('pp-name').textContent = p.title;
   document.getElementById('pp-price').textContent = p.priceDisplay || p.price;
-  document.getElementById('pp-description').textContent = p.description;
+  document.getElementById('pp-description').innerHTML = p.descriptionHtml || p.description;
 
   // Dimensions and details (may be empty for API products until metafields are set up)
   var dimensionsEl = document.getElementById('pp-dimensions');

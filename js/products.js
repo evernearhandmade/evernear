@@ -65,9 +65,9 @@ const PRODUCTS = {
     sizes: 'Le Essentials',
     price: '$32',
     images: ["img/pink-1.jpg"],
-    description: 'A compact everyday essential in sweet pink gingham. The perfect size to toss in your bag for quick touch-ups — lipstick, a small mirror, and all the little things you keep close.',
-    dimensions: 'Le Essentials (Small): 6"W × 3.5"H × 3"D',
-    details: 'Lined interior · Fabric zipper tie · Handmade in SoCal'
+    description: '<strong>A soft place for your everyday essentials ✿</strong><br><br>Thoughtfully handmade in small batches using quilted cotton, this pouch is designed to hold your daily go-to items — lip liner, makeup, skincare, or small necessities. Perfect for slipping into your purse when you\'re on the go.<br><br><strong>✿ Details:</strong><br>– Handmade in California<br>– Cotton exterior<br>– Fully lined interior<br>– Lightweight yet structured<br>– Zipper closure<br><br><strong>✿ Size:</strong><br>Approx. 7" x 5"',
+    dimensions: '',
+    details: ''
   },
   "sorbet": {
     name: 'Sorbet',
@@ -75,9 +75,9 @@ const PRODUCTS = {
     sizes: 'Le Essentials',
     price: '$32',
     images: ["img/sorbet-1.jpg"],
-    description: 'Fresh mint and red stripes — cheerful and summery. The Sorbet is a little burst of color made for life on the go.',
-    dimensions: 'Le Essentials (Small): 6"W × 3.5"H × 3"D',
-    details: 'Lined interior · Fabric zipper tie · Gold zipper · Handmade in SoCal'
+    description: '<strong>A little burst of color for life on the go ✿</strong><br><br>Fresh mint and red stripes — cheerful and summery. This compact pouch is thoughtfully handmade in small batches, perfect for holding your everyday essentials wherever you go.<br><br><strong>✿ Details:</strong><br>– Handmade in California<br>– Cotton exterior<br>– Fully lined interior<br>– Lightweight yet structured<br>– Gold zipper closure<br><br><strong>✿ Size:</strong><br>Approx. 7" x 5"',
+    dimensions: '',
+    details: ''
   },
   "bluebell-essential": {
     name: 'Bluebell',
@@ -85,9 +85,9 @@ const PRODUCTS = {
     sizes: 'Le Essentials',
     price: '$32',
     images: ["img/bluebell-garden-essentials.jpg"],
-    description: 'Tiny blue flowers on soft white muslin — gentle and sweet. The Bluebell Essential is made from a textured double-gauze fabric that feels as soft as it looks.',
-    dimensions: 'Le Essentials (Small): 6"W × 3.5"H × 3"D',
-    details: 'Double-gauze muslin · Fabric zipper tie · Handmade in SoCal'
+    description: '<strong>Gentle and sweet, just like the real thing ✿</strong><br><br>Tiny blue flowers on soft white muslin — the Bluebell Essential is made from a textured double-gauze fabric that feels as soft as it looks. Perfect for carrying your daily essentials.<br><br><strong>✿ Details:</strong><br>– Handmade in California<br>– Double-gauze muslin exterior<br>– Fully lined interior<br>– Lightweight yet structured<br>– Zipper closure with fabric tie<br><br><strong>✿ Size:</strong><br>Approx. 7" x 5"',
+    dimensions: '',
+    details: ''
   },
   "petal-essential": {
     name: 'Petal',
@@ -95,9 +95,9 @@ const PRODUCTS = {
     sizes: 'Le Essentials',
     price: '$32',
     images: ["img/petal-garden-essentials.jpg"],
-    description: 'White lace stripe and delicate botanical embroidery — romantic and refined. The Petal Essential captures the quiet beauty of something handmade with care.',
-    dimensions: 'Le Essentials (Small): 6"W × 3.5"H × 3"D',
-    details: 'Embroidered fabric · Fabric zipper tie · Handmade in SoCal'
+    description: '<strong>Romantic and refined, made with care ✿</strong><br><br>White lace stripe and delicate botanical embroidery — the Petal Essential captures the quiet beauty of something handmade with love. A perfect little pouch for your everyday essentials.<br><br><strong>✿ Details:</strong><br>– Handmade in California<br>– Embroidered fabric exterior<br>– Fully lined interior<br>– Lightweight yet structured<br>– Zipper closure with fabric tie<br><br><strong>✿ Size:</strong><br>Approx. 7" x 5"',
+    dimensions: '',
+    details: ''
   },
   "bluebell-garden": {
     name: 'Bluebell',
