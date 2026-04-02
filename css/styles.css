@@ -143,6 +143,7 @@
     .about-text{max-width:680px;margin:0 auto;text-align:center;}
     .about-text p{font-family:'EB Garamond',serif;font-size:1.05rem;line-height:1.85;color:var(--muted);margin-bottom:24px;}
     .about-text p:last-child{margin-bottom:0;}
+    .about-signoff{font-family:'Cormorant Upright',serif;font-style:italic;font-size:1.15rem;margin-top:12px;color:var(--charcoal);}
 
     /* FOOTER */
     footer{background:var(--charcoal);color:var(--bg);text-align:center;padding:60px 24px;}
