@@ -15,14 +15,14 @@ var HERO_SLIDES = [
   { src: 'img/lifestyle-3.jpg', product: 'bluebell-garden' },
   { src: 'img/lifestyle-4.jpg', product: 'sorbet' },
   { src: 'img/lifestyle-5.jpg', product: 'strawberry-shortcake' },
-  { src: 'img/lifestyle-6.jpg', product: 'petal-garden' },
+  { src: 'img/lifestyle-6.jpg', product: 'midnight-dot' },
   { src: 'img/lifestyle-7.jpg', product: 'petal-essential' },
   { src: 'img/lifestyle-8.jpeg', product: 'ivory-dot' },
-  { src: 'img/lifestyle-9.jpg', product: 'midnight-dot' },
+  { src: 'img/lifestyle-9.jpg', product: 'petal-garden' },
 ];
 
-// Speed: seconds per full cycle (lower = faster)
-var HERO_SCROLL_SPEED = 8;
+// Pixels per second (higher = faster)
+var HERO_SCROLL_SPEED = 80;
 
 // ═══════════════════════════════════════════════════
 // Nothing below needs to be changed
@@ -46,10 +46,51 @@ var HERO_SCROLL_SPEED = 8;
     return slide;
   }
 
-  // Build original set + duplicate for seamless loop
-  HERO_SLIDES.forEach(function(s) { track.appendChild(buildSlide(s)); });
-  HERO_SLIDES.forEach(function(s) { track.appendChild(buildSlide(s)); });
+  // Build 3 copies for seamless infinite scroll
+  for (var copy = 0; copy < 3; copy++) {
+    HERO_SLIDES.forEach(function(s) { track.appendChild(buildSlide(s)); });
+  }
 
-  // Set scroll speed via CSS custom property
-  track.style.setProperty('--scroll-duration', HERO_SCROLL_SPEED + 's');
+  var offset = 0;
+  var paused = false;
+  var setWidth = 0;
+  var gap = 16;
+
+  function measureSet() {
+    // Width of one full set of slides (including gaps)
+    var slide = track.querySelector('.hero-carousel-slide');
+    if (!slide) return 0;
+    var slideWidth = slide.offsetWidth;
+    return HERO_SLIDES.length * (slideWidth + gap);
+  }
+
+  // Pause on hover
+  track.addEventListener('mouseenter', function() { paused = true; });
+  track.addEventListener('mouseleave', function() { paused = false; });
+
+  var lastTime = 0;
+
+  function animate(timestamp) {
+    if (!lastTime) lastTime = timestamp;
+    var delta = timestamp - lastTime;
+    lastTime = timestamp;
+
+    if (!paused) {
+      offset += (HERO_SCROLL_SPEED * delta) / 1000;
+
+      // Recalculate set width in case of resize
+      setWidth = measureSet();
+
+      // When we've scrolled past one full set, reset back seamlessly
+      if (setWidth > 0 && offset >= setWidth) {
+        offset -= setWidth;
+      }
+
+      track.style.transform = 'translateX(-' + offset + 'px)';
+    }
+
+    requestAnimationFrame(animate);
+  }
+
+  requestAnimationFrame(animate);
 })();
