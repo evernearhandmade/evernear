@@ -144,6 +144,9 @@
     .footer-links a:hover{opacity:0.9;}
     .footer-copy{font-family:'EB Garamond',serif;font-size:0.68rem;letter-spacing:0.1em;opacity:0.3;}
 
+    /* ABOUT PAGE */
+    #about-page{padding-top:62px;min-height:100vh;background:var(--bg);}
+
     /* CONTACT PAGE */
     #contact-page{padding-top:62px;min-height:100vh;background:var(--bg);}
     .contact-inner{max-width:680px;margin:0 auto;padding:60px 24px 100px;}

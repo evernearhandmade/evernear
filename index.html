@@ -46,6 +46,7 @@
     <li><a href="#" onclick="navTo('garden');closeMenu();">The Garden Collection</a></li>
     <li><a href="#" onclick="navTo('essentials');closeMenu();">Ever Essentials</a></li>
     <li><a href="#" onclick="navTo('classic');closeMenu();">Shop All</a></li>
+    <li><a href="#" onclick="showPage('about-page');closeMenu();">About</a></li>
     <li><a href="#" onclick="showPage('contact-page');closeMenu();">Contact</a></li>
   </ul>
 </div>
@@ -242,21 +243,6 @@
     </div>
   </div>
 
-  <!-- ABOUT -->
-  <div class="about-section" id="about">
-    <div class="section-inner">
-      <p class="section-eyebrow">Our Story</p>
-      <h2 class="section-title">Made with love in Southern California</h2>
-      <div class="section-divider"></div>
-      <div class="about-text fade-in">
-        <p>Ever Near came from a simple realization: even before I knew God, He was always there.</p>
-        <p>I wasn't raised Christian, but as I've grown closer in my faith, I've started to look back and see things differently. Moments that felt random now feel guided. Things that once felt uncertain feel a little more held. Ever Near is a reminder of that.</p>
-        <p>This brand is also inspired by the everyday things I've always loved — getting ready, the small items we keep close, and the comfort in those little details. The pieces are made to be part of your daily life, holding what you need while feeling personal and familiar.</p>
-        <p>Ever Near is about faith, femininity, and the quiet ways both show up in our lives — always close, always with you.</p>
-      </div>
-    </div>
-  </div>
-
   <footer>
     <img src="img/logo.png" alt="Ever Near" class="footer-logo"/>
     <ul class="footer-links">
@@ -264,7 +250,7 @@
       <li><a onclick="navTo('gingham')">Gingham</a></li>
       <li><a onclick="navTo('garden')">Garden</a></li>
       <li><a onclick="navTo('essentials')">Essentials</a></li>
-      <li><a onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">About</a></li>
+      <li><a onclick="showPage('about-page')">About</a></li>
       <li><a onclick="showPage('contact-page')">Contact</a></li>
     </ul>
     <p class="footer-copy">&copy; 2026 Ever Near. All rights reserved.</p>
@@ -318,6 +304,27 @@
         <p class="contact-email-label">Reach us at</p>
         <a href="mailto:evernear.co@gmail.com" class="contact-email">evernear.co@gmail.com</a>
         <p class="contact-note">We'll do our best to get back to you within 24–48 hours.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ ABOUT PAGE ══ -->
+<div id="about-page" class="page">
+  <div class="contact-inner">
+    <button class="product-page-back" onclick="showPage('main-page')">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      Back
+    </button>
+    <div class="contact-content">
+      <p class="section-eyebrow">Our Story</p>
+      <h2 class="section-title">Made with love in Southern California</h2>
+      <div class="section-divider"></div>
+      <div class="about-text">
+        <p>Ever Near came from a simple realization: even before I knew God, He was always there.</p>
+        <p>I wasn't raised Christian, but as I've grown closer in my faith, I've started to look back and see things differently. Moments that felt random now feel guided. Things that once felt uncertain feel a little more held. Ever Near is a reminder of that.</p>
+        <p>This brand is also inspired by the everyday things I've always loved — getting ready, the small items we keep close, and the comfort in those little details. The pieces are made to be part of your daily life, holding what you need while feeling personal and familiar.</p>
+        <p>Ever Near is about faith, femininity, and the quiet ways both show up in our lives — always close, always with you.</p>
       </div>
     </div>
   </div>
