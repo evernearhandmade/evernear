@@ -41,11 +41,11 @@
 <div class="dropdown-overlay" id="dropdown">
   <p class="dropdown-label">Shop</p>
   <ul class="dropdown-links">
-    <li><a href="#" onclick="navTo('classic');closeMenu();">The Classic Collection</a></li>
+    <li><a href="#" onclick="navTo('essentials');closeMenu();">Ever Essentials</a></li>
     <li><a href="#" onclick="navTo('gingham');closeMenu();">The Gingham Collection</a></li>
     <li><a href="#" onclick="navTo('garden');closeMenu();">The Garden Collection</a></li>
-    <li><a href="#" onclick="navTo('essentials');closeMenu();">Ever Essentials</a></li>
-    <li><a href="#" onclick="navTo('classic');closeMenu();">Shop All</a></li>
+    <li><a href="#" onclick="navTo('classic');closeMenu();">The Classic Collection</a></li>
+    <li><a href="#" onclick="navTo('essentials');closeMenu();">Shop All</a></li>
     <li><a href="#" onclick="showPage('about-page');closeMenu();">About</a></li>
     <li><a href="#" onclick="showPage('contact-page');closeMenu();">Contact</a></li>
   </ul>
@@ -63,79 +63,32 @@
       <div class="hero-carousel-track" id="hero-carousel-track"></div>
     </div>
     <div class="hero-divider"></div>
-    <p class="hero-tagline">Handcrafted &nbsp;·&nbsp; Small Batch &nbsp;·&nbsp; Made with Love</p>
-    <button class="btn-primary" onclick="navTo('classic')">Shop the Collection</button>
+    <p class="hero-tagline">Handcrafted &nbsp;·&nbsp; Small Batch</p>
+    <button class="btn-primary" onclick="navTo('essentials')">Shop the Collection</button>
   </section>
 
-  <!-- CLASSIC COLLECTION -->
-  <div class="shop-section bg-main" id="classic">
+  <!-- EVER ESSENTIALS -->
+  <div class="shop-section bg-main" id="essentials">
     <div class="section-inner">
       <p class="section-eyebrow">Collection No. 1</p>
-      <h2 class="section-title">The Classic Collection</h2>
+      <h2 class="section-title">Ever Essentials</h2>
       <div class="section-divider"></div>
-      <div class="product-grid">
-        <div class="product-card fade-in" onclick="openProduct('midnight-dot')">
-          <div class="product-carousel">
-            <div class="carousel-track" id="track-0">
-              <div class="carousel-slide"><img src="img/midnight-dot-1.jpg" alt="Midnight Dot"/></div>
-              <div class="carousel-slide"><img src="img/midnight-dot-2.jpg" alt="Midnight Dot sizes"/></div>
-            </div>
-            <button class="carousel-btn prev" onclick="event.stopPropagation();slide(0,-1)">&#8249;</button>
-            <button class="carousel-btn next" onclick="event.stopPropagation();slide(0,1)">&#8250;</button>
-          </div>
-          <div class="carousel-dots" id="dots-0">
-            <span class="dot active" onclick="event.stopPropagation();goTo(0,0)"></span>
-            <span class="dot" onclick="event.stopPropagation();goTo(0,1)"></span>
-          </div>
-          <div class="product-info">
-            <div class="product-meta-row">
-              <span class="product-sizes">Le Classique &nbsp;·&nbsp; Le Voyage</span>
-              <span class="product-price">From $45</span>
-            </div>
-            <p class="product-name">Midnight Dot</p>
-          </div>
+      <div class="product-grid-4">
+        <div class="product-card fade-in" onclick="openProduct('pink')">
+          <div class="product-carousel"><div class="carousel-track" id="track-0"><div class="carousel-slide"><img src="img/pink-1.jpg" alt="Pink"/></div></div></div>
+          <div class="product-info"><div class="product-meta-row"><span class="product-sizes">Le Essentials</span><span class="product-price">$32</span></div><p class="product-name">Pink</p></div>
         </div>
-        <div class="product-card fade-in" onclick="openProduct('ivory-dot')">
-          <div class="product-carousel">
-            <div class="carousel-track" id="track-1">
-              <div class="carousel-slide"><img src="img/ivory-dot-1.jpg" alt="Ivory Dot"/></div>
-              <div class="carousel-slide"><img src="img/ivory-dot-2.jpg" alt="Ivory Dot sizes"/></div>
-            </div>
-            <button class="carousel-btn prev" onclick="event.stopPropagation();slide(1,-1)">&#8249;</button>
-            <button class="carousel-btn next" onclick="event.stopPropagation();slide(1,1)">&#8250;</button>
-          </div>
-          <div class="carousel-dots" id="dots-1">
-            <span class="dot active" onclick="event.stopPropagation();goTo(1,0)"></span>
-            <span class="dot" onclick="event.stopPropagation();goTo(1,1)"></span>
-          </div>
-          <div class="product-info">
-            <div class="product-meta-row">
-              <span class="product-sizes">Le Classique &nbsp;·&nbsp; Le Voyage</span>
-              <span class="product-price">From $45</span>
-            </div>
-            <p class="product-name">Ivory Dot</p>
-          </div>
+        <div class="product-card fade-in" onclick="openProduct('sorbet')">
+          <div class="product-carousel"><div class="carousel-track" id="track-1"><div class="carousel-slide"><img src="img/sorbet-1.jpg" alt="Sorbet"/></div></div></div>
+          <div class="product-info"><div class="product-meta-row"><span class="product-sizes">Le Essentials</span><span class="product-price">$32</span></div><p class="product-name">Sorbet</p></div>
         </div>
-        <div class="product-card fade-in" onclick="openProduct('cherry-blossom')">
-          <div class="product-carousel">
-            <div class="carousel-track" id="track-2">
-              <div class="carousel-slide"><img src="img/cherry-blossom-1.jpg" alt="Cherry Blossom"/></div>
-              <div class="carousel-slide"><img src="img/cherry-blossom-2.jpg" alt="Cherry Blossom open"/></div>
-            </div>
-            <button class="carousel-btn prev" onclick="event.stopPropagation();slide(2,-1)">&#8249;</button>
-            <button class="carousel-btn next" onclick="event.stopPropagation();slide(2,1)">&#8250;</button>
-          </div>
-          <div class="carousel-dots" id="dots-2">
-            <span class="dot active" onclick="event.stopPropagation();goTo(2,0)"></span>
-            <span class="dot" onclick="event.stopPropagation();goTo(2,1)"></span>
-          </div>
-          <div class="product-info">
-            <div class="product-meta-row">
-              <span class="product-sizes">Le Classique &nbsp;·&nbsp; Le Voyage</span>
-              <span class="product-price">From $45</span>
-            </div>
-            <p class="product-name">Cherry Blossom</p>
-          </div>
+        <div class="product-card fade-in" onclick="openProduct('bluebell-essential')">
+          <div class="product-carousel"><div class="carousel-track" id="track-2"><div class="carousel-slide"><img src="img/bluebell-garden-essentials.jpg" alt="Bluebell"/></div></div></div>
+          <div class="product-info"><div class="product-meta-row"><span class="product-sizes">Le Essentials</span><span class="product-price">$32</span></div><p class="product-name">Bluebell</p></div>
+        </div>
+        <div class="product-card fade-in" onclick="openProduct('petal-essential')">
+          <div class="product-carousel"><div class="carousel-track" id="track-3"><div class="carousel-slide"><img src="img/petal-garden-essentials.jpg" alt="Petal"/></div></div></div>
+          <div class="product-info"><div class="product-meta-row"><span class="product-sizes">Le Essentials</span><span class="product-price">$32</span></div><p class="product-name">Petal</p></div>
         </div>
       </div>
     </div>
@@ -149,21 +102,21 @@
       <div class="section-divider"></div>
       <div class="product-grid">
         <div class="product-card fade-in" onclick="openProduct('blueberry')">
-          <div class="product-carousel"><div class="carousel-track" id="track-3"><div class="carousel-slide"><img src="img/blueberry-1.jpg" alt="Blueberry"/></div></div></div>
+          <div class="product-carousel"><div class="carousel-track" id="track-4"><div class="carousel-slide"><img src="img/blueberry-1.jpg" alt="Blueberry"/></div></div></div>
           <div class="product-info">
             <div class="product-meta-row"><span class="product-sizes">Le Classique</span><span class="product-price">$46</span></div>
             <p class="product-name">Blueberry</p>
           </div>
         </div>
         <div class="product-card fade-in" onclick="openProduct('strawberry-shortcake')">
-          <div class="product-carousel"><div class="carousel-track" id="track-4"><div class="carousel-slide"><img src="img/strawberry-shortcake-1.jpg" alt="Strawberry Shortcake"/></div></div></div>
+          <div class="product-carousel"><div class="carousel-track" id="track-5"><div class="carousel-slide"><img src="img/strawberry-shortcake-1.jpg" alt="Strawberry Shortcake"/></div></div></div>
           <div class="product-info">
             <div class="product-meta-row"><span class="product-sizes">Le Classique</span><span class="product-price">$46</span></div>
             <p class="product-name">Strawberry Shortcake</p>
           </div>
         </div>
         <div class="product-card fade-in" onclick="openProduct('vanilla-creme')">
-          <div class="product-carousel"><div class="carousel-track" id="track-5"><div class="carousel-slide"><img src="img/vanilla-creme-1.jpg" alt="Vanilla Crème"/></div></div></div>
+          <div class="product-carousel"><div class="carousel-track" id="track-6"><div class="carousel-slide"><img src="img/vanilla-creme-1.jpg" alt="Vanilla Crème"/></div></div></div>
           <div class="product-info">
             <div class="product-meta-row"><span class="product-sizes">Le Classique</span><span class="product-price">$46</span></div>
             <p class="product-name">Vanilla Crème</p>
@@ -182,27 +135,9 @@
       <div class="product-grid">
         <div class="product-card fade-in" onclick="openProduct('bluebell-garden')">
           <div class="product-carousel">
-            <div class="carousel-track" id="track-6">
+            <div class="carousel-track" id="track-7">
               <div class="carousel-slide"><img src="img/bluebell-garden-classique.jpg" alt="Bluebell Le Classique"/></div>
               <div class="carousel-slide"><img src="img/bluebell-garden-essentials.jpg" alt="Bluebell Le Essentials"/></div>
-            </div>
-            <button class="carousel-btn prev" onclick="event.stopPropagation();slide(6,-1)">&#8249;</button>
-            <button class="carousel-btn next" onclick="event.stopPropagation();slide(6,1)">&#8250;</button>
-          </div>
-          <div class="carousel-dots" id="dots-6">
-            <span class="dot active" onclick="event.stopPropagation();goTo(6,0)"></span>
-            <span class="dot" onclick="event.stopPropagation();goTo(6,1)"></span>
-          </div>
-          <div class="product-info">
-            <div class="product-meta-row"><span class="product-sizes">Le Classique &nbsp;·&nbsp; Le Essentials</span><span class="product-price">From $32</span></div>
-            <p class="product-name">Bluebell</p>
-          </div>
-        </div>
-        <div class="product-card fade-in" onclick="openProduct('petal-garden')">
-          <div class="product-carousel">
-            <div class="carousel-track" id="track-7">
-              <div class="carousel-slide"><img src="img/petal-garden-classique.jpg" alt="Petal Le Classique"/></div>
-              <div class="carousel-slide"><img src="img/petal-garden-essentials.jpg" alt="Petal Le Essentials"/></div>
             </div>
             <button class="carousel-btn prev" onclick="event.stopPropagation();slide(7,-1)">&#8249;</button>
             <button class="carousel-btn next" onclick="event.stopPropagation();slide(7,1)">&#8250;</button>
@@ -213,6 +148,24 @@
           </div>
           <div class="product-info">
             <div class="product-meta-row"><span class="product-sizes">Le Classique &nbsp;·&nbsp; Le Essentials</span><span class="product-price">From $32</span></div>
+            <p class="product-name">Bluebell</p>
+          </div>
+        </div>
+        <div class="product-card fade-in" onclick="openProduct('petal-garden')">
+          <div class="product-carousel">
+            <div class="carousel-track" id="track-8">
+              <div class="carousel-slide"><img src="img/petal-garden-classique.jpg" alt="Petal Le Classique"/></div>
+              <div class="carousel-slide"><img src="img/petal-garden-essentials.jpg" alt="Petal Le Essentials"/></div>
+            </div>
+            <button class="carousel-btn prev" onclick="event.stopPropagation();slide(8,-1)">&#8249;</button>
+            <button class="carousel-btn next" onclick="event.stopPropagation();slide(8,1)">&#8250;</button>
+          </div>
+          <div class="carousel-dots" id="dots-8">
+            <span class="dot active" onclick="event.stopPropagation();goTo(8,0)"></span>
+            <span class="dot" onclick="event.stopPropagation();goTo(8,1)"></span>
+          </div>
+          <div class="product-info">
+            <div class="product-meta-row"><span class="product-sizes">Le Classique &nbsp;·&nbsp; Le Essentials</span><span class="product-price">From $32</span></div>
             <p class="product-name">Petal</p>
           </div>
         </div>
@@ -220,28 +173,75 @@
     </div>
   </div>
 
-  <!-- EVER ESSENTIALS -->
-  <div class="shop-section bg-tint" id="essentials">
+  <!-- CLASSIC COLLECTION -->
+  <div class="shop-section bg-tint" id="classic">
     <div class="section-inner">
       <p class="section-eyebrow">Collection No. 4</p>
-      <h2 class="section-title">Ever Essentials</h2>
+      <h2 class="section-title">The Classic Collection</h2>
       <div class="section-divider"></div>
-      <div class="product-grid-4">
-        <div class="product-card fade-in" onclick="openProduct('pink')">
-          <div class="product-carousel"><div class="carousel-track" id="track-8"><div class="carousel-slide"><img src="img/pink-1.jpg" alt="Pink"/></div></div></div>
-          <div class="product-info"><div class="product-meta-row"><span class="product-sizes">Le Essentials</span><span class="product-price">$32</span></div><p class="product-name">Pink</p></div>
+      <div class="product-grid">
+        <div class="product-card fade-in" onclick="openProduct('midnight-dot')">
+          <div class="product-carousel">
+            <div class="carousel-track" id="track-9">
+              <div class="carousel-slide"><img src="img/midnight-dot-1.jpg" alt="Midnight Dot"/></div>
+              <div class="carousel-slide"><img src="img/midnight-dot-2.jpg" alt="Midnight Dot sizes"/></div>
+            </div>
+            <button class="carousel-btn prev" onclick="event.stopPropagation();slide(9,-1)">&#8249;</button>
+            <button class="carousel-btn next" onclick="event.stopPropagation();slide(9,1)">&#8250;</button>
+          </div>
+          <div class="carousel-dots" id="dots-9">
+            <span class="dot active" onclick="event.stopPropagation();goTo(9,0)"></span>
+            <span class="dot" onclick="event.stopPropagation();goTo(9,1)"></span>
+          </div>
+          <div class="product-info">
+            <div class="product-meta-row">
+              <span class="product-sizes">Le Classique &nbsp;·&nbsp; Le Voyage</span>
+              <span class="product-price">From $45</span>
+            </div>
+            <p class="product-name">Midnight Dot</p>
+          </div>
         </div>
-        <div class="product-card fade-in" onclick="openProduct('sorbet')">
-          <div class="product-carousel"><div class="carousel-track" id="track-9"><div class="carousel-slide"><img src="img/sorbet-1.jpg" alt="Sorbet"/></div></div></div>
-          <div class="product-info"><div class="product-meta-row"><span class="product-sizes">Le Essentials</span><span class="product-price">$32</span></div><p class="product-name">Sorbet</p></div>
+        <div class="product-card fade-in" onclick="openProduct('ivory-dot')">
+          <div class="product-carousel">
+            <div class="carousel-track" id="track-10">
+              <div class="carousel-slide"><img src="img/ivory-dot-1.jpg" alt="Ivory Dot"/></div>
+              <div class="carousel-slide"><img src="img/ivory-dot-2.jpg" alt="Ivory Dot sizes"/></div>
+            </div>
+            <button class="carousel-btn prev" onclick="event.stopPropagation();slide(10,-1)">&#8249;</button>
+            <button class="carousel-btn next" onclick="event.stopPropagation();slide(10,1)">&#8250;</button>
+          </div>
+          <div class="carousel-dots" id="dots-10">
+            <span class="dot active" onclick="event.stopPropagation();goTo(10,0)"></span>
+            <span class="dot" onclick="event.stopPropagation();goTo(10,1)"></span>
+          </div>
+          <div class="product-info">
+            <div class="product-meta-row">
+              <span class="product-sizes">Le Classique &nbsp;·&nbsp; Le Voyage</span>
+              <span class="product-price">From $45</span>
+            </div>
+            <p class="product-name">Ivory Dot</p>
+          </div>
         </div>
-        <div class="product-card fade-in" onclick="openProduct('bluebell-essential')">
-          <div class="product-carousel"><div class="carousel-track" id="track-10"><div class="carousel-slide"><img src="img/bluebell-garden-essentials.jpg" alt="Bluebell"/></div></div></div>
-          <div class="product-info"><div class="product-meta-row"><span class="product-sizes">Le Essentials</span><span class="product-price">$32</span></div><p class="product-name">Bluebell</p></div>
-        </div>
-        <div class="product-card fade-in" onclick="openProduct('petal-essential')">
-          <div class="product-carousel"><div class="carousel-track" id="track-11"><div class="carousel-slide"><img src="img/petal-garden-essentials.jpg" alt="Petal"/></div></div></div>
-          <div class="product-info"><div class="product-meta-row"><span class="product-sizes">Le Essentials</span><span class="product-price">$32</span></div><p class="product-name">Petal</p></div>
+        <div class="product-card fade-in" onclick="openProduct('cherry-blossom')">
+          <div class="product-carousel">
+            <div class="carousel-track" id="track-11">
+              <div class="carousel-slide"><img src="img/cherry-blossom-1.jpg" alt="Cherry Blossom"/></div>
+              <div class="carousel-slide"><img src="img/cherry-blossom-2.jpg" alt="Cherry Blossom open"/></div>
+            </div>
+            <button class="carousel-btn prev" onclick="event.stopPropagation();slide(11,-1)">&#8249;</button>
+            <button class="carousel-btn next" onclick="event.stopPropagation();slide(11,1)">&#8250;</button>
+          </div>
+          <div class="carousel-dots" id="dots-11">
+            <span class="dot active" onclick="event.stopPropagation();goTo(11,0)"></span>
+            <span class="dot" onclick="event.stopPropagation();goTo(11,1)"></span>
+          </div>
+          <div class="product-info">
+            <div class="product-meta-row">
+              <span class="product-sizes">Le Classique &nbsp;·&nbsp; Le Voyage</span>
+              <span class="product-price">From $45</span>
+            </div>
+            <p class="product-name">Cherry Blossom</p>
+          </div>
         </div>
       </div>
     </div>
@@ -250,10 +250,10 @@
   <footer>
     <img src="img/logo.png" alt="Ever Near" class="footer-logo"/>
     <ul class="footer-links">
-      <li><a onclick="navTo('classic')">Classic</a></li>
+      <li><a onclick="navTo('essentials')">Essentials</a></li>
       <li><a onclick="navTo('gingham')">Gingham</a></li>
       <li><a onclick="navTo('garden')">Garden</a></li>
-      <li><a onclick="navTo('essentials')">Essentials</a></li>
+      <li><a onclick="navTo('classic')">Classic</a></li>
       <li><a onclick="showPage('about-page')">About</a></li>
       <li><a onclick="showPage('contact-page')">Contact</a></li>
     </ul>

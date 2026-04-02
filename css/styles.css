@@ -226,7 +226,10 @@
     @media(max-width:640px){
       nav{padding:0 20px;}
       .search-input{width:120px;}
-      .product-grid,.product-grid-4{grid-template-columns:1fr;gap:36px;}
+      .product-grid,.product-grid-4{grid-template-columns:repeat(2,1fr);gap:16px;}
+      .product-name{font-size:1.05rem;}
+      .product-price{font-size:0.75rem;}
+      .product-sizes{font-size:0.62rem;}
       .hero-logo{width:78vw;}
       .cart-drawer{width:100%;max-width:100vw;}
     }
