@@ -27,6 +27,8 @@ var STATIC_COLLECTION_MAP = {
   'sorbet':             'essentials',
   'bluebell-essential': 'essentials',
   'petal-essential':    'essentials',
+  'mini-dot':           'essentials',
+  'cherry-blossom-le-essentials': 'essentials',
 };
 
 // Counter for unique carousel IDs

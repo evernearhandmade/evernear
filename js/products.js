@@ -22,11 +22,11 @@ const PRODUCTS = {
   "cherry-blossom": {
     name: 'Cherry Blossom',
     collection: 'The Classic Collection',
-    sizes: 'Le Classique · Le Voyage',
-    price: 'From $45',
+    sizes: 'Le Classique',
+    price: '$46',
     images: ["img/cherry-blossom-1.jpg","img/cherry-blossom-2.jpg"],
     description: '',
-    dimensions: 'Le Classique (Medium): 8"W × 5"H × 5"D<br>Le Voyage (Large): 9"W × 6"H × 7"D',
+    dimensions: 'Le Classique (Medium): 8"W × 5"H × 5"D',
     details: 'Lined interior · Red zipper · Eyelet lace trim · Handmade in SoCal'
   },
   "blueberry": {
@@ -118,6 +118,16 @@ const PRODUCTS = {
     description: '',
     dimensions: 'Le Classique (Medium): 8"W × 5"H × 5"D',
     details: 'Embroidered lace fabric · Lined interior · Fabric zipper bow · Handmade in SoCal'
+  },
+  "mini-dot": {
+    name: 'Mini Dot',
+    collection: 'Ever Essentials',
+    sizes: 'Le Essentials',
+    price: '$32',
+    images: ["img/mini-dot-1.jpg"],
+    description: '',
+    dimensions: 'Le Essentials (Small): 7"W × 5"H × 2"D',
+    details: ''
   },
   "cherry-blossom-le-essentials": {
     name: 'Cherry Blossom',
