@@ -9,6 +9,13 @@
     html{scroll-behavior:smooth;}
     body{background:var(--bg);color:var(--charcoal);font-family:'EB Garamond',Georgia,serif;overflow-x:hidden;}
 
+    /* ANNOUNCEMENT BANNER */
+    .announcement-banner{position:fixed;top:0;left:0;right:0;z-index:300;background:#E8DCC6;color:var(--charcoal);font-family:'Cormorant Upright',serif;font-size:0.88rem;font-style:italic;letter-spacing:0.06em;text-align:center;padding:10px 24px;line-height:1.4;}
+    .announcement-banner.hidden{display:none;}
+    body.has-banner nav{top:40px;}
+    body.has-banner .dropdown-overlay{top:102px;}
+    @media(max-width:640px){.announcement-banner{font-size:0.78rem;padding:9px 16px;}body.has-banner nav{top:38px;}body.has-banner .dropdown-overlay{top:100px;}}
+
     /* NAV */
     nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 36px;height:62px;background:rgba(244,246,252,0.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(154,160,184,0.2);}
     .nav-left{display:flex;align-items:center;gap:16px;}

@@ -21,6 +21,11 @@
 </head>
 <body>
 
+<!-- ANNOUNCEMENT BANNER — auto-hides after June 18, 2025 -->
+<div class="announcement-banner" id="announcement-banner">
+  Heading to Europe June 4–18 🤍 Orders placed during this time will ship upon my return — thank you for your patience!
+</div>
+
 <nav>
   <div class="nav-left">
     <button class="menu-btn" id="menuBtn" onclick="toggleMenu()" aria-label="Menu">
@@ -370,5 +375,18 @@
   <script src="js/cart.js?v=4"></script>
   <script src="js/hero-carousel.js?v=4"></script>
   <script src="js/main.js?v=4"></script>
+  <script>
+    // Announcement banner — hide automatically after June 18, 2025
+    (function() {
+      var expiry = new Date('2026-06-19T00:00:00');
+      var now = new Date();
+      var banner = document.getElementById('announcement-banner');
+      if (now >= expiry) {
+        banner.classList.add('hidden');
+      } else {
+        document.body.classList.add('has-banner');
+      }
+    })();
+  </script>
 </body>
 </html>
