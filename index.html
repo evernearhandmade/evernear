@@ -376,16 +376,25 @@
   <script src="js/hero-carousel.js?v=4"></script>
   <script src="js/main.js?v=4"></script>
   <script>
-    // Announcement banner — hide automatically after June 18, 2025
+    // Announcement banner — hide automatically after June 18, 2026
     (function() {
       var expiry = new Date('2026-06-19T00:00:00');
       var now = new Date();
       var banner = document.getElementById('announcement-banner');
       if (now >= expiry) {
         banner.classList.add('hidden');
-      } else {
-        document.body.classList.add('has-banner');
+        return;
       }
+      // Dynamically offset nav and dropdown by actual banner height
+      function applyBannerOffset() {
+        var h = banner.offsetHeight;
+        var nav = document.querySelector('nav');
+        var dropdown = document.querySelector('.dropdown-overlay');
+        if (nav) nav.style.top = h + 'px';
+        if (dropdown) dropdown.style.top = (h + 62) + 'px';
+      }
+      applyBannerOffset();
+      window.addEventListener('resize', applyBannerOffset);
     })();
   </script>
 </body>
