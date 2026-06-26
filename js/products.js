@@ -19,6 +19,16 @@ const PRODUCTS = {
     dimensions: 'Le Classique (Medium): 8"W × 5"H × 5"D<br>Le Voyage (Large): 9"W × 6"H × 7"D',
     details: 'Lined interior · Zipper closure · Quilted fabric · Handmade in SoCal'
   },
+  "cocoa-dot": {
+    name: 'Cocoa Dot',
+    collection: 'The Classic Collection',
+    sizes: 'Le Classique',
+    price: '',
+    images: [],
+    description: '',
+    dimensions: 'Le Classique (Medium): 8"W × 5"H × 5"D',
+    details: 'Lined interior · Zipper closure · Quilted fabric · Handmade in SoCal'
+  },
   "cherry-blossom": {
     name: 'Cherry Blossom',
     collection: 'The Classic Collection',
