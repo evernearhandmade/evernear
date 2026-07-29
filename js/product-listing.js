@@ -11,6 +11,7 @@ var COLLECTION_MAP = {
   'the-gingham-collection': { sectionId: 'gingham', gridClass: 'product-grid' },
   'the-garden-collection': { sectionId: 'garden', gridClass: 'product-grid' },
   'ever-essentials':        { sectionId: 'essentials', gridClass: 'product-grid-4' },
+  'custom':                 { sectionId: 'custom', gridClass: 'product-grid' },
   'made-to-order':          { sectionId: 'custom', gridClass: 'product-grid' },
   'custom-embroidered':     { sectionId: 'custom', gridClass: 'product-grid' },
   'bespoke':                { sectionId: 'custom', gridClass: 'product-grid' },

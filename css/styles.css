@@ -69,6 +69,7 @@
     .section-title{font-family:'Cormorant Upright',serif;font-size:clamp(2rem,4vw,3rem);font-weight:400;text-align:center;color:var(--charcoal);margin-bottom:20px;}
     .section-divider{width:40px;height:1px;background:var(--taupe);margin:0 auto 60px;}
     .section-new-badge{display:block;font-family:'EB Garamond',serif;font-size:0.68rem;letter-spacing:0.32em;text-transform:uppercase;color:var(--bg);background:var(--charcoal);padding:5px 16px;margin:0 auto 20px;width:fit-content;}
+    #custom .product-grid{grid-template-columns:repeat(auto-fill,minmax(280px,360px));justify-content:center;}
     .nav-new-badge{font-family:'EB Garamond',serif;font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;background:var(--charcoal);color:var(--bg);padding:2px 8px;margin-left:8px;vertical-align:middle;}
     /* Custom text input on product detail */
     .pp-custom-text-wrap{margin-bottom:28px;}
