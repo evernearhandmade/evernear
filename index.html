@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Cormorant+Upright:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=5">
+  <link rel="stylesheet" href="css/styles.css?v=6">
 </head>
 <body>
 
@@ -46,6 +46,7 @@
 <div class="dropdown-overlay" id="dropdown">
   <p class="dropdown-label">Shop</p>
   <ul class="dropdown-links">
+    <li><a href="#" onclick="navTo('custom');closeMenu();">✦ Custom Embroidered <span class="nav-new-badge">New</span></a></li>
     <li><a href="#" onclick="navTo('essentials');closeMenu();">Ever Essentials</a></li>
     <li><a href="#" onclick="navTo('gingham');closeMenu();">The Gingham Collection</a></li>
     <li><a href="#" onclick="navTo('garden');closeMenu();">The Garden Collection</a></li>
@@ -71,6 +72,17 @@
     <p class="hero-tagline">Handcrafted &nbsp;·&nbsp; Small Batch</p>
     <button class="btn-primary" onclick="navTo('essentials')">Shop the Collection</button>
   </section>
+
+  <!-- CUSTOM EMBROIDERED -->
+  <div class="shop-section bg-tint" id="custom">
+    <div class="section-inner">
+      <p class="section-eyebrow">Made to Order</p>
+      <span class="section-new-badge">✦ New</span>
+      <h2 class="section-title">Custom Embroidered Bags</h2>
+      <div class="section-divider"></div>
+      <div class="product-grid"></div>
+    </div>
+  </div>
 
   <!-- EVER ESSENTIALS -->
   <div class="shop-section bg-main" id="essentials">
@@ -290,6 +302,11 @@
         <p class="pp-dimensions-label">Dimensions</p>
         <p class="pp-dimensions" id="pp-dimensions"></p>
         <p class="pp-details" id="pp-details"></p>
+        <div class="pp-custom-text-wrap" id="pp-custom-text-wrap" style="display:none;">
+          <label class="pp-custom-text-label" for="pp-custom-text">Embroidery Text</label>
+          <input class="pp-custom-text-input" id="pp-custom-text" type="text" maxlength="30" placeholder="e.g. your name or initials"/>
+          <p class="pp-custom-text-hint">Up to 30 characters · Appears on your bag exactly as entered</p>
+        </div>
         <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
         <p class="cart-confirm" id="cart-confirm">Added to your cart ✓</p>
       </div>
@@ -365,16 +382,16 @@
   </div>
 </div>
 
-  <script src="js/config.js?v=5"></script>
-  <script src="js/products.js?v=5"></script>
-  <script src="js/shopify-api.js?v=5"></script>
-  <script src="js/carousel.js?v=5"></script>
-  <script src="js/navigation.js?v=5"></script>
-  <script src="js/product-detail.js?v=5"></script>
-  <script src="js/product-listing.js?v=5"></script>
-  <script src="js/cart.js?v=5"></script>
-  <script src="js/hero-carousel.js?v=5"></script>
-  <script src="js/main.js?v=5"></script>
+  <script src="js/config.js?v=6"></script>
+  <script src="js/products.js?v=6"></script>
+  <script src="js/shopify-api.js?v=6"></script>
+  <script src="js/carousel.js?v=6"></script>
+  <script src="js/navigation.js?v=6"></script>
+  <script src="js/product-detail.js?v=6"></script>
+  <script src="js/product-listing.js?v=6"></script>
+  <script src="js/cart.js?v=6"></script>
+  <script src="js/hero-carousel.js?v=6"></script>
+  <script src="js/main.js?v=6"></script>
   <script>
     // Announcement banner — hide automatically after June 18, 2026
     (function() {

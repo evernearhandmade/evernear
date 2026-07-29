@@ -72,15 +72,31 @@ function addToCart() {
     image = p.images[0].url || p.images[0];
   }
 
+  // Capture custom embroidery text if required
+  var customText = '';
+  var customWrap = document.getElementById('pp-custom-text-wrap');
+  var customInput = document.getElementById('pp-custom-text');
+  if (customWrap && customWrap.style.display !== 'none' && customInput) {
+    customText = customInput.value.trim();
+    if (!customText) {
+      customInput.classList.add('error');
+      customInput.focus();
+      return;
+    }
+    customInput.classList.remove('error');
+  }
+
   var cart = getCart();
 
-  // Check if same variant already in cart
+  // Check if same variant already in cart (custom text items always add as new line)
   var existingIdx = -1;
-  cart.forEach(function(item, idx) {
-    if (item.productHandle === handle && item.variantTitle === variantTitle) {
-      existingIdx = idx;
-    }
-  });
+  if (!customText) {
+    cart.forEach(function(item, idx) {
+      if (item.productHandle === handle && item.variantTitle === variantTitle) {
+        existingIdx = idx;
+      }
+    });
+  }
 
   if (existingIdx >= 0) {
     cart[existingIdx].quantity += 1;
@@ -94,6 +110,7 @@ function addToCart() {
       currencyCode: currencyCode,
       quantity: 1,
       image: image,
+      customText: customText || undefined,
     });
   }
 
@@ -202,6 +219,9 @@ function renderCartDrawer() {
     if (variantLabel) {
       html += '<p class="cart-item-variant">' + variantLabel + '</p>';
     }
+    if (item.customText) {
+      html += '<p class="cart-item-variant">✦ ' + item.customText + '</p>';
+    }
     html += '<div class="cart-item-bottom">';
 
     // Quantity controls
@@ -241,7 +261,11 @@ async function initiateCheckout() {
     // Use Shopify Cart API
     try {
       var lines = cart.map(function(item) {
-        return { merchandiseId: item.variantId, quantity: item.quantity };
+        var line = { merchandiseId: item.variantId, quantity: item.quantity };
+        if (item.customText) {
+          line.attributes = [{ key: 'Embroidery Text', value: item.customText }];
+        }
+        return line;
       });
 
       var mutation = 'mutation CartCreate($input: CartInput!) { cartCreate(input: $input) { cart { id checkoutUrl } userErrors { field message } } }';

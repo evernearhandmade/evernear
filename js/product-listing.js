@@ -11,6 +11,9 @@ var COLLECTION_MAP = {
   'the-gingham-collection': { sectionId: 'gingham', gridClass: 'product-grid' },
   'the-garden-collection': { sectionId: 'garden', gridClass: 'product-grid' },
   'ever-essentials':        { sectionId: 'essentials', gridClass: 'product-grid-4' },
+  'made-to-order':          { sectionId: 'custom', gridClass: 'product-grid' },
+  'custom-embroidered':     { sectionId: 'custom', gridClass: 'product-grid' },
+  'bespoke':                { sectionId: 'custom', gridClass: 'product-grid' },
 };
 
 // Map static product slugs to their collection section IDs
@@ -29,6 +32,7 @@ var STATIC_COLLECTION_MAP = {
   'petal-essential':    'essentials',
   'mini-dot':           'essentials',
   'cherry-blossom-le-essentials': 'essentials',
+  'le-voyage-custom-embroidered-quilted-cosmetic-bag': 'custom',
 };
 
 // Counter for unique carousel IDs
@@ -251,6 +255,7 @@ async function loadProducts() {
 
   // Group static products by section
   var sectionProducts = {
+    'custom': [],
     'classic': [],
     'gingham': [],
     'garden': [],
@@ -315,7 +320,20 @@ async function loadProducts() {
           if (p.handle === product.handle) inAnySection = true;
         });
       });
-      // If not placed yet, skip — it'll still be in PRODUCT_DATA for direct access
+      // If not placed yet, check if STATIC_COLLECTION_MAP claims it for a section
+      if (!inAnySection) {
+        var staticSectionId = STATIC_COLLECTION_MAP[product.handle];
+        if (!staticSectionId) {
+          // Also try title-to-slug conversion
+          var slug = product.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
+          staticSectionId = STATIC_COLLECTION_MAP[slug];
+        }
+        if (staticSectionId && sectionProducts[staticSectionId] !== undefined) {
+          // Replace the static placeholder with the richer API version
+          sectionProducts[staticSectionId] = sectionProducts[staticSectionId].filter(function(p) { return p.handle !== product.handle; });
+          sectionProducts[staticSectionId].push(product);
+        }
+      }
     });
   }
 

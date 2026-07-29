@@ -153,6 +153,15 @@ function openProduct(handle) {
     });
   }
 
+  // Show/hide custom text input
+  var customWrap = document.getElementById('pp-custom-text-wrap');
+  var customInput = document.getElementById('pp-custom-text');
+  var needsCustomText = !!(p.requiresCustomText || (typeof PRODUCTS !== 'undefined' && PRODUCTS[handle] && PRODUCTS[handle].requiresCustomText));
+  if (customWrap) {
+    customWrap.style.display = needsCustomText ? '' : 'none';
+    if (customInput) customInput.value = '';
+  }
+
   // Handle sold out state
   var cartBtn = document.querySelector('.add-to-cart-btn');
   if (!p.availableForSale) {

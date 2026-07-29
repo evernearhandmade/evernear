@@ -1,4 +1,15 @@
 const PRODUCTS = {
+  "le-voyage-custom-embroidered-quilted-cosmetic-bag": {
+    name: 'Le Voyage — Custom Embroidered Quilted Cosmetic Bag',
+    collection: 'Made to Order',
+    sizes: 'Le Voyage',
+    price: '',
+    images: [],
+    description: '',
+    dimensions: 'Le Voyage (Large): 9"W × 6"H × 7"D',
+    details: 'Custom embroidery · Quilted fabric · Lined interior · Zipper closure · Handmade in SoCal',
+    requiresCustomText: true,
+  },
   "midnight-dot": {
     name: 'Midnight Dot',
     collection: 'The Classic Collection',
