@@ -47,7 +47,14 @@ function addToCart() {
   var price = 0;
   var currencyCode = 'USD';
 
-  if (p.fromApi && selectedBtn && selectedBtn.getAttribute('data-variant-id')) {
+  if (window.currentSelectedVariant) {
+    // Multi-option product: variant resolved by product-detail.js
+    var csv = window.currentSelectedVariant;
+    variantId = csv.id;
+    variantTitle = csv.title === 'Default Title' ? '' : csv.title;
+    price = parseFloat(csv.price.amount);
+    currencyCode = csv.price.currencyCode;
+  } else if (p.fromApi && selectedBtn && selectedBtn.getAttribute('data-variant-id')) {
     variantId = selectedBtn.getAttribute('data-variant-id');
     variantTitle = selectedBtn.textContent;
     price = parseFloat(selectedBtn.getAttribute('data-price'));
