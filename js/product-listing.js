@@ -7,9 +7,10 @@ var PRODUCT_DATA = {};
 
 // Map collection handles to section element IDs and grid classes
 var COLLECTION_MAP = {
+  'the-beach-collection':   { sectionId: 'beach', gridClass: 'product-grid' },
   'the-classic-collection': { sectionId: 'classic', gridClass: 'product-grid' },
   'the-gingham-collection': { sectionId: 'gingham', gridClass: 'product-grid' },
-  'the-garden-collection': { sectionId: 'garden', gridClass: 'product-grid' },
+  'the-garden-collection':  { sectionId: 'garden', gridClass: 'product-grid' },
   'ever-essentials':        { sectionId: 'essentials', gridClass: 'product-grid-4' },
   'custom':                 { sectionId: 'custom', gridClass: 'product-grid' },
   'made-to-order':          { sectionId: 'custom', gridClass: 'product-grid' },
@@ -257,8 +258,9 @@ async function loadProducts() {
   // Group static products by section
   var sectionProducts = {
     'custom': [],
-    'classic': [],
+    'beach': [],
     'gingham': [],
+    'classic': [],
     'garden': [],
     'essentials': [],
   };
