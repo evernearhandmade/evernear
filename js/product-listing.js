@@ -8,6 +8,8 @@ var PRODUCT_DATA = {};
 // Map collection handles to section element IDs and grid classes
 var COLLECTION_MAP = {
   'the-beach-collection':   { sectionId: 'beach', gridClass: 'product-grid' },
+  'beach-collection':       { sectionId: 'beach', gridClass: 'product-grid' },
+  'beach':                  { sectionId: 'beach', gridClass: 'product-grid' },
   'the-classic-collection': { sectionId: 'classic', gridClass: 'product-grid' },
   'the-gingham-collection': { sectionId: 'gingham', gridClass: 'product-grid' },
   'the-garden-collection':  { sectionId: 'garden', gridClass: 'product-grid' },
@@ -296,6 +298,9 @@ async function loadProducts() {
       // API data overrides static in the global lookup
       PRODUCT_DATA[product.handle] = product;
     });
+
+    // Log all collection handles for debugging
+    console.log('[Ever Near] Collections from API:', apiCollections.map(function(c) { return c.handle + ' ("' + c.title + '")'; }).join(', '));
 
     // Build collection -> product mapping from API
     apiCollections.forEach(function(col) {
