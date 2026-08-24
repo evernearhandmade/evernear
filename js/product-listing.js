@@ -328,16 +328,26 @@ async function loadProducts() {
           if (p.handle === product.handle) inAnySection = true;
         });
       });
-      // If not placed yet, check if STATIC_COLLECTION_MAP claims it for a section
+      // If not placed yet, try the product's own collection associations
+      if (!inAnySection && product.collections && product.collections.length > 0) {
+        product.collections.forEach(function(col) {
+          if (inAnySection) return;
+          var mapping = COLLECTION_MAP[col.handle];
+          if (mapping && sectionProducts[mapping.sectionId] !== undefined) {
+            sectionProducts[mapping.sectionId].push(product);
+            inAnySection = true;
+            console.log('[Ever Near] Placed "' + product.title + '" via product-level collection "' + col.handle + '"');
+          }
+        });
+      }
+      // If still not placed, check STATIC_COLLECTION_MAP
       if (!inAnySection) {
         var staticSectionId = STATIC_COLLECTION_MAP[product.handle];
         if (!staticSectionId) {
-          // Also try title-to-slug conversion
           var slug = product.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
           staticSectionId = STATIC_COLLECTION_MAP[slug];
         }
         if (staticSectionId && sectionProducts[staticSectionId] !== undefined) {
-          // Replace the static placeholder with the richer API version
           sectionProducts[staticSectionId] = sectionProducts[staticSectionId].filter(function(p) { return p.handle !== product.handle; });
           sectionProducts[staticSectionId].push(product);
         }
