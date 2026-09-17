@@ -21,10 +21,6 @@
 </head>
 <body>
 
-<!-- ANNOUNCEMENT BANNER — auto-hides after June 18, 2025 -->
-<div class="announcement-banner" id="announcement-banner">
-  Heading to Europe June 4–18 🤍 Orders placed during this time will ship upon my return — thank you for your patience!
-</div>
 
 <nav>
   <div class="nav-left">
@@ -403,27 +399,5 @@
   <script src="js/cart.js?v=8"></script>
   <script src="js/hero-carousel.js?v=8"></script>
   <script src="js/main.js?v=8"></script>
-  <script>
-    // Announcement banner — hide automatically after June 18, 2026
-    (function() {
-      var expiry = new Date('2026-06-19T00:00:00');
-      var now = new Date();
-      var banner = document.getElementById('announcement-banner');
-      if (now >= expiry) {
-        banner.classList.add('hidden');
-        return;
-      }
-      // Dynamically offset nav and dropdown by actual banner height
-      function applyBannerOffset() {
-        var h = banner.offsetHeight;
-        var nav = document.querySelector('nav');
-        var dropdown = document.querySelector('.dropdown-overlay');
-        if (nav) nav.style.top = h + 'px';
-        if (dropdown) dropdown.style.top = (h + 62) + 'px';
-      }
-      applyBannerOffset();
-      window.addEventListener('resize', applyBannerOffset);
-    })();
-  </script>
 </body>
 </html>
