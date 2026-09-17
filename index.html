@@ -46,11 +46,11 @@
 <div class="dropdown-overlay" id="dropdown">
   <p class="dropdown-label">Shop</p>
   <ul class="dropdown-links">
-    <li><a href="#" onclick="navTo('beach');closeMenu();">The Beach Collection <span class="nav-new-badge">New</span></a></li>
     <li><a href="#" onclick="navTo('custom');closeMenu();">Custom Embroidered</a></li>
     <li><a href="#" onclick="navTo('gingham');closeMenu();">The Gingham Collection</a></li>
     <li><a href="#" onclick="navTo('classic');closeMenu();">The Classic Collection</a></li>
     <li><a href="#" onclick="navTo('garden');closeMenu();">The Garden Collection</a></li>
+    <li><a href="#" onclick="navTo('beach');closeMenu();">The Beach Collection <span class="nav-new-badge">New</span></a></li>
     <li><a href="#" onclick="navTo('essentials');closeMenu();">Ever Essentials</a></li>
     <li><a href="#" onclick="navTo('beach');closeMenu();">Shop All</a></li>
     <li><a href="#" onclick="showPage('about-page');closeMenu();">About</a></li>
@@ -84,21 +84,10 @@
     </div>
   </div>
 
-  <!-- BEACH COLLECTION -->
-  <div class="shop-section bg-main" id="beach">
+  <!-- GINGHAM COLLECTION -->
+  <div class="shop-section bg-main" id="gingham">
     <div class="section-inner">
       <p class="section-eyebrow">Collection No. 1</p>
-      <span class="section-new-badge">✦ New</span>
-      <h2 class="section-title">The Beach Collection</h2>
-      <div class="section-divider"></div>
-      <div class="product-grid"></div>
-    </div>
-  </div>
-
-  <!-- GINGHAM COLLECTION -->
-  <div class="shop-section bg-tint" id="gingham">
-    <div class="section-inner">
-      <p class="section-eyebrow">Collection No. 2</p>
       <h2 class="section-title">The Gingham Collection</h2>
       <div class="section-divider"></div>
       <div class="product-grid">
@@ -128,9 +117,9 @@
   </div>
 
   <!-- CLASSIC COLLECTION -->
-  <div class="shop-section bg-main" id="classic">
+  <div class="shop-section bg-tint" id="classic">
     <div class="section-inner">
-      <p class="section-eyebrow">Collection No. 3</p>
+      <p class="section-eyebrow">Collection No. 2</p>
       <h2 class="section-title">The Classic Collection</h2>
       <div class="section-divider"></div>
       <div class="product-grid">
@@ -202,9 +191,9 @@
   </div>
 
   <!-- GARDEN COLLECTION -->
-  <div class="shop-section bg-tint" id="garden">
+  <div class="shop-section bg-main" id="garden">
     <div class="section-inner">
-      <p class="section-eyebrow">Collection No. 4</p>
+      <p class="section-eyebrow">Collection No. 3</p>
       <h2 class="section-title">The Garden Collection</h2>
       <div class="section-divider"></div>
       <div class="product-grid">
@@ -248,6 +237,17 @@
     </div>
   </div>
 
+  <!-- BEACH COLLECTION -->
+  <div class="shop-section bg-tint" id="beach">
+    <div class="section-inner">
+      <p class="section-eyebrow">Collection No. 4</p>
+      <span class="section-new-badge">✦ New</span>
+      <h2 class="section-title">The Beach Collection</h2>
+      <div class="section-divider"></div>
+      <div class="product-grid"></div>
+    </div>
+  </div>
+
   <!-- EVER ESSENTIALS -->
   <div class="shop-section bg-main" id="essentials">
     <div class="section-inner">
@@ -278,10 +278,10 @@
   <footer>
     <img src="img/logo.png" alt="Ever Near" class="footer-logo"/>
     <ul class="footer-links">
-      <li><a onclick="navTo('beach')">Beach</a></li>
       <li><a onclick="navTo('gingham')">Gingham</a></li>
       <li><a onclick="navTo('classic')">Classic</a></li>
       <li><a onclick="navTo('garden')">Garden</a></li>
+      <li><a onclick="navTo('beach')">Beach</a></li>
       <li><a onclick="navTo('essentials')">Essentials</a></li>
       <li><a onclick="showPage('about-page')">About</a></li>
       <li><a onclick="showPage('contact-page')">Contact</a></li>
