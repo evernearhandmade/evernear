@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Cormorant+Upright:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=8">
+  <link rel="stylesheet" href="css/styles.css?v=9">
 </head>
 <body>
 
@@ -378,13 +378,17 @@
       <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
     </button>
   </div>
+  <div class="cart-shipping-bar" id="cart-shipping-bar">
+    <p class="cart-shipping-bar-msg" id="cart-shipping-bar-msg"></p>
+    <div class="cart-shipping-track"><div class="cart-shipping-fill" id="cart-shipping-fill"></div></div>
+  </div>
   <div class="cart-drawer-items" id="cart-drawer-items"></div>
   <div class="cart-drawer-footer" id="cart-drawer-footer" style="display:none;">
     <div class="cart-subtotal">
       <span class="cart-subtotal-label">Subtotal</span>
       <span class="cart-subtotal-amount" id="cart-subtotal">$0</span>
     </div>
-    <p class="cart-shipping-note">Shipping calculated at checkout</p>
+    <p class="cart-shipping-note" id="cart-shipping-note">Shipping calculated at checkout</p>
     <button class="cart-checkout-btn" id="cart-checkout-btn" onclick="initiateCheckout()">Checkout</button>
   </div>
 </div>
@@ -396,7 +400,7 @@
   <script src="js/navigation.js?v=8"></script>
   <script src="js/product-detail.js?v=8"></script>
   <script src="js/product-listing.js?v=8"></script>
-  <script src="js/cart.js?v=8"></script>
+  <script src="js/cart.js?v=9"></script>
   <script src="js/hero-carousel.js?v=8"></script>
   <script src="js/main.js?v=8"></script>
 </body>

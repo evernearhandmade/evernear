@@ -186,6 +186,30 @@ function toggleCart() {
   }
 }
 
+var FREE_SHIPPING_THRESHOLD = 70;
+
+function updateShippingBar(total) {
+  var bar = document.getElementById('cart-shipping-bar');
+  var msg = document.getElementById('cart-shipping-bar-msg');
+  var fill = document.getElementById('cart-shipping-fill');
+  var note = document.getElementById('cart-shipping-note');
+  if (!bar || !msg || !fill) return;
+
+  var rem = FREE_SHIPPING_THRESHOLD - total;
+  var pct = Math.min(100, Math.round(total / FREE_SHIPPING_THRESHOLD * 100));
+  fill.style.width = pct + '%';
+
+  if (rem <= 0) {
+    msg.className = 'cart-shipping-bar-msg unlocked';
+    msg.innerHTML = '✦ You\'ve unlocked free shipping!';
+    if (note) note.textContent = 'Free shipping applied at checkout';
+  } else {
+    msg.className = 'cart-shipping-bar-msg';
+    msg.innerHTML = 'You\'re <strong>$' + rem + '</strong> away from free shipping';
+    if (note) note.textContent = 'Shipping calculated at checkout';
+  }
+}
+
 function renderCartDrawer() {
   var cart = getCart();
   var itemsEl = document.getElementById('cart-drawer-items');
@@ -249,6 +273,7 @@ function renderCartDrawer() {
   itemsEl.innerHTML = html;
   footerEl.style.display = '';
   subtotalEl.textContent = formatMoney(getCartTotal(), 'USD');
+  updateShippingBar(getCartTotal());
 }
 
 // ── Checkout ──
