@@ -334,6 +334,7 @@ async function loadProducts() {
       });
       // If not placed yet, try the product's own collection associations
       if (!inAnySection && product.collections && product.collections.length > 0) {
+        console.log('[Ever Near] Unplaced: "' + product.title + '" belongs to collections: ' + product.collections.map(function(c){ return c.handle; }).join(', '));
         product.collections.forEach(function(col) {
           if (inAnySection) return;
           var mapping = COLLECTION_MAP[col.handle];
