@@ -309,10 +309,6 @@ async function initiateCheckout() {
       }
 
       var checkoutUrl = data.cartCreate.cart.checkoutUrl;
-
-      // Clear cart and redirect
-      localStorage.removeItem(CART_KEY);
-      updateCartBadge();
       window.location.href = checkoutUrl;
       return;
 
