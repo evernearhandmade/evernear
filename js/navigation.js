@@ -30,3 +30,11 @@ function showPage(id) {
   document.getElementById(id).classList.add('active');
   window.scrollTo(0, 0);
 }
+
+// Handle mobile back button — if on product page, go back to main instead of leaving the site
+window.addEventListener('popstate', function() {
+  var productPage = document.getElementById('product-page');
+  if (productPage && productPage.classList.contains('active')) {
+    showPage('main-page');
+  }
+});

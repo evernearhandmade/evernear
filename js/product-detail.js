@@ -226,9 +226,14 @@ function openProduct(handle) {
   }
 
   document.getElementById('cart-confirm').classList.remove('show');
+  history.pushState({ page: 'product', handle: handle }, '');
   showPage('product-page');
 }
 
 function closeProduct() {
-  showPage('main-page');
+  if (history.state && history.state.page === 'product') {
+    history.back();
+  } else {
+    showPage('main-page');
+  }
 }
