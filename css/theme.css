@@ -298,16 +298,6 @@ button { cursor: pointer; }
 .instagram-section--evening {
   padding-top: 72px;
 }
-.insta-eyebrow {
-  display: block;
-  font-size: 11px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  font-weight: 500;
-  margin-bottom: 14px;
-}
-.insta-eyebrow--day { color: var(--text); }
-.insta-eyebrow--evening { color: var(--gold); }
 .insta-h2 {
   margin: 0;
   font-family: 'Cormorant Garamond', serif;
@@ -325,7 +315,9 @@ button { cursor: pointer; }
 .insta-desc--day { color: var(--text); }
 .insta-desc--evening { color: var(--soft-text); }
 .insta-handle {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   margin-top: 18px;
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
@@ -333,7 +325,17 @@ button { cursor: pointer; }
   transition: opacity 0.2s;
 }
 .insta-handle:hover { opacity: 0.75; }
-.insta-handle--day { color: var(--heading); border-bottom: 1px solid var(--text); }
+.insta-icon {
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.4;
+  opacity: 0.8;
+  flex-shrink: 0;
+}
+.insta-handle--day { color: var(--heading); }
+.insta-handle--day span { border-bottom: 1px solid var(--text); }
 .insta-handle--evening { color: var(--gold); }
 .insta-grid {
   display: grid;
