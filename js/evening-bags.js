@@ -72,6 +72,10 @@ async function loadEveningBags() {
     products.forEach(function(p) {
       var tags = p.tags || [];
       var silTag = tags.find(function(t) { return t.startsWith('silhouette:'); });
+      if (!silTag) {
+        var silCol = p.collections.edges.find(function(e) { return e.node.title.startsWith('silhouette:'); });
+        if (silCol) silTag = silCol.node.title;
+      }
       var sil = silTag ? silTag.replace('silhouette:', '').trim() : 'other';
       if (!groups[sil]) {
         groups[sil] = [];

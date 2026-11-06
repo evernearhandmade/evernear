@@ -375,7 +375,23 @@ function filterSection(id, btn) {
 var cbObserver = new IntersectionObserver(function(entries) {
   entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.1 });
-document.querySelectorAll('.fade-in').forEach(function(el) { cbObserver.observe(el); });
+
+function observeFadeIns(root) {
+  (root || document).querySelectorAll('.fade-in').forEach(function(el) { cbObserver.observe(el); });
+}
+observeFadeIns();
+
+// Watch for product cards added async by loadProducts()
+var mutObs = new MutationObserver(function(mutations) {
+  mutations.forEach(function(m) {
+    m.addedNodes.forEach(function(node) {
+      if (node.nodeType !== 1) return;
+      if (node.classList && node.classList.contains('fade-in')) cbObserver.observe(node);
+      node.querySelectorAll('.fade-in').forEach(function(el) { cbObserver.observe(el); });
+    });
+  });
+});
+mutObs.observe(document.body, { childList: true, subtree: true });
 
 // Load products from API
 loadProducts();
