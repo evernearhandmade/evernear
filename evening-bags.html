@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Evening Bags — Ever Near</title>
+  <meta name="description" content="Handcrafted satin evening bags with ring handles and beaded fringe. Sewn by hand in small batches in San Diego.">
+  <meta property="og:title" content="Evening Bags — Ever Near">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://evernearhandmade.com/evening-bags.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/theme.css?v=1">
+  <style>
+    body { background: #5A2A4A; }
+    /* Ensure evening page cart-badge uses gold */
+    .cart-badge { background: #D9C08C; color: #3E1C33; }
+  </style>
+</head>
+<body class="evening-page">
+
+<!-- ══ MAIN PAGE ══ -->
+<div id="main-page" class="page active">
+
+  <div class="announce-bar announce-bar--plum">
+    Sewn by hand in small batches &nbsp;·&nbsp; Free shipping on every evening bag
+  </div>
+
+  <div style="background: var(--plum);">
+    <header class="site-header">
+      <nav class="header-nav header-nav--plum">
+        <a href="cosmetic-bags.html">Cosmetic Bags</a>
+        <a href="evening-bags.html" class="current">Evening Bags</a>
+        <a href="index.html#about" class="hide-mobile">About</a>
+      </nav>
+      <a href="index.html" class="header-logo" aria-label="Ever Near home">
+        <img src="img/logo-light.png" alt="Ever Near">
+      </a>
+      <nav class="header-nav header-nav--right header-nav--plum">
+        <button class="cart-trigger cart-trigger--plum" onclick="toggleCart()" aria-label="Open cart">
+          <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          Cart
+          <span class="cart-badge" id="cart-badge">0</span>
+        </button>
+      </nav>
+    </header>
+  </div>
+
+  <!-- Intro -->
+  <section class="evening-intro">
+    <h1>Evening Bags</h1>
+    <div class="evening-gold-rule"></div>
+    <p class="evening-intro-tagline">For the nights worth dressing up for.</p>
+  </section>
+
+  <!-- Story Block -->
+  <section class="evening-story">
+    <img class="evening-story-img" src="img/satin-minis-golden-hour.jpg" alt="Burgundy, champagne and blush satin mini bags with ring handles and beaded fringe in golden evening light" loading="lazy">
+    <div class="evening-story-text">
+      <span class="evening-story-eyebrow">Sewn in San Diego</span>
+      <h2 class="evening-story-title">Satin, beads and a little golden hour</h2>
+      <p class="evening-story-body">Our first evening bags are satin minis, finished with ring handles and beaded fringe. Each one is sewn by hand in small batches, just in time for the holiday season. More fabrics and shapes are on the way.</p>
+    </div>
+  </section>
+
+  <!-- Products (dynamic) -->
+  <div class="evening-products">
+    <div id="evening-products-container">
+      <!-- populated by evening-bags.js -->
+    </div>
+  </div>
+
+  <!-- Coming Soon Band -->
+  <section class="coming-soon-band">
+    <span class="coming-soon-eyebrow">Coming soon</span>
+    <h2 class="coming-soon-h2">More evening bags are on the way</h2>
+    <p class="coming-soon-desc">New shapes and fabrics, released in small batches. Join the list to hear first.</p>
+    <p class="coming-soon-next">Next up: knot minis in velvet</p>
+    <form class="coming-soon-form" onsubmit="handleEmailSignup(event)">
+      <label for="drop-email">Email address</label>
+      <input id="drop-email" type="email" placeholder="Your email" required>
+      <button type="submit" id="drop-email-btn">Join the list</button>
+    </form>
+    <p class="coming-soon-thanks" id="drop-email-thanks">You're on the list. ✦</p>
+  </section>
+
+  <!-- Instagram -->
+  <section class="instagram-section instagram-section--evening">
+    <span class="insta-eyebrow insta-eyebrow--evening">On Instagram</span>
+    <h2 class="insta-h2 insta-h2--evening">Follow the journey</h2>
+    <p class="insta-desc insta-desc--evening">Behind the scenes from the sewing studio, new drops first, and the Ever Near Diaries.</p>
+    <a href="https://www.instagram.com/evernearhandmade/" class="insta-handle insta-handle--evening" target="_blank" rel="noopener">@evernearhandmade</a>
+    <div class="insta-grid">
+      <a href="https://www.instagram.com/evernearhandmade/" target="_blank" rel="noopener">
+        <img src="img/satin-minis-golden-hour.jpg" alt="Satin mini bags in golden light" loading="lazy">
+      </a>
+      <a href="https://www.instagram.com/evernearhandmade/" target="_blank" rel="noopener">
+        <img src="img/hero-night-candlelit-satin-mini.jpg" alt="Burgundy satin mini on a candlelit dinner table" loading="lazy">
+      </a>
+      <a href="https://www.instagram.com/evernearhandmade/" target="_blank" rel="noopener">
+        <img src="img/hero-day-vanity-cosmetic-bag.jpg" alt="Blue toile cosmetic bag on a marble vanity" loading="lazy">
+      </a>
+      <a href="https://www.instagram.com/evernearhandmade/" target="_blank" rel="noopener">
+        <img src="img/toile-bag-skincare.jpg" alt="Blue toile cosmetic bag with skincare" loading="lazy">
+      </a>
+    </div>
+  </section>
+
+  <div class="evening-cosmetic-link">
+    <a href="cosmetic-bags.html">Shop cosmetic bags</a>
+  </div>
+
+  <footer class="site-footer site-footer--evening" style="background: var(--plum);">
+    <a href="index.html" class="footer-logo">
+      <img src="img/logo-light.png" alt="Ever Near">
+    </a>
+    <nav class="footer-nav footer-nav--evening">
+      <a href="cosmetic-bags.html">Cosmetic Bags</a>
+      <a href="evening-bags.html">Evening Bags</a>
+      <a href="https://www.instagram.com/evernearhandmade/" target="_blank" rel="noopener">@evernearhandmade</a>
+    </nav>
+  </footer>
+
+</div><!-- end main-page -->
+
+<!-- ══ PRODUCT PAGE ══ -->
+<div id="product-page" class="page" style="background: var(--off-white);">
+  <div class="product-page-inner">
+    <button class="product-page-back" onclick="closeProduct()">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      Back
+    </button>
+    <div class="product-page-layout">
+      <div class="pp-gallery">
+        <img id="pp-main-img" class="pp-main-img" src="" alt=""/>
+        <div class="pp-thumbs" id="pp-thumbs"></div>
+      </div>
+      <div class="pp-info">
+        <p class="pp-collection" id="pp-collection"></p>
+        <h1 class="pp-name" id="pp-name"></h1>
+        <p class="pp-price" id="pp-price"></p>
+        <div class="pp-divider"></div>
+        <p class="pp-size-label">Select Size</p>
+        <div class="pp-sizes" id="pp-sizes"></div>
+        <p class="pp-description" id="pp-description"></p>
+        <p class="pp-dimensions-label">Dimensions</p>
+        <p class="pp-dimensions" id="pp-dimensions"></p>
+        <p class="pp-details" id="pp-details"></p>
+        <div class="pp-custom-text-wrap" id="pp-custom-text-wrap" style="display:none;">
+          <label class="pp-custom-text-label" for="pp-custom-text">Embroidery Text</label>
+          <input class="pp-custom-text-input" id="pp-custom-text" type="text" maxlength="30" placeholder="e.g. your name or initials"/>
+          <p class="pp-custom-text-hint">Up to 30 characters · Appears on your bag exactly as entered</p>
+        </div>
+        <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+        <p class="cart-confirm" id="cart-confirm">Added to your cart ✓</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ CART DRAWER ══ -->
+<div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cart-drawer">
+  <div class="cart-drawer-header">
+    <div>
+      <span class="cart-drawer-title">Your Cart</span>
+      <span class="cart-drawer-count" id="cart-drawer-count"></span>
+    </div>
+    <button class="cart-drawer-close" onclick="closeCart()" aria-label="Close cart">
+      <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="cart-shipping-bar" id="cart-shipping-bar">
+    <p class="cart-shipping-bar-msg" id="cart-shipping-bar-msg"></p>
+    <div class="cart-shipping-track"><div class="cart-shipping-fill" id="cart-shipping-fill"></div></div>
+  </div>
+  <div class="cart-drawer-items" id="cart-drawer-items"></div>
+  <div class="cart-drawer-footer" id="cart-drawer-footer" style="display:none;">
+    <div class="cart-subtotal">
+      <span class="cart-subtotal-label">Subtotal</span>
+      <span class="cart-subtotal-amount" id="cart-subtotal">$0</span>
+    </div>
+    <p class="cart-shipping-note" id="cart-shipping-note">Shipping calculated at checkout</p>
+    <button class="cart-checkout-btn" id="cart-checkout-btn" onclick="initiateCheckout()">Checkout</button>
+  </div>
+</div>
+
+<script src="js/config.js?v=1"></script>
+<script src="js/products.js?v=1"></script>
+<script src="js/shopify-api.js?v=2"></script>
+<script src="js/navigation.js?v=1"></script>
+<script src="js/product-detail.js?v=1"></script>
+<script src="js/product-listing.js?v=1"></script>
+<script src="js/cart.js?v=1"></script>
+<script src="js/evening-bags.js?v=1"></script>
+</body>
+</html>

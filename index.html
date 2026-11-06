@@ -3,297 +3,116 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ever Near — Handcrafted Cosmetic Bags</title>
-  <meta name="description" content="Ever Near offers handcrafted cosmetic bags made with love in Southern California. Shop our curated collections of quilted, small-batch bags perfect for everyday essentials.">
-  <meta name="keywords" content="handmade cosmetic bags, handcrafted makeup bags, quilted bags, small batch accessories, Southern California, Ever Near">
-  <meta property="og:title" content="Ever Near — Handcrafted Cosmetic Bags">
-  <meta property="og:description" content="Handcrafted, small-batch cosmetic bags made with love in Southern California.">
+  <title>Ever Near — Handcrafted Bags</title>
+  <meta name="description" content="Ever Near makes handcrafted cosmetic bags and evening bags in small batches in San Diego, CA.">
+  <meta property="og:title" content="Ever Near — Handcrafted Bags">
+  <meta property="og:description" content="Handcrafted cosmetic and evening bags, sewn by hand in San Diego.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://evernearhandmade.com">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Ever Near — Handcrafted Cosmetic Bags">
-  <meta name="twitter:description" content="Handcrafted, small-batch cosmetic bags made with love in Southern California.">
   <link rel="canonical" href="https://evernearhandmade.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Cormorant+Upright:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=9">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/theme.css?v=1">
 </head>
 <body>
-
-
-<nav>
-  <div class="nav-left">
-    <button class="menu-btn" id="menuBtn" onclick="toggleMenu()" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-    <div class="search-wrap">
-      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
-      <input class="search-input" type="text" placeholder="Search"/>
-    </div>
-  </div>
-  <button class="cart-btn" onclick="toggleCart()">
-    <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
-    My Cart
-    <span class="cart-badge" id="cart-badge">0</span>
-  </button>
-</nav>
-
-<div class="dropdown-overlay" id="dropdown">
-  <p class="dropdown-label">Shop</p>
-  <ul class="dropdown-links">
-    <li><a href="#" onclick="navTo('custom');closeMenu();">Custom Embroidered</a></li>
-    <li><a href="#" onclick="navTo('gingham');closeMenu();">The Gingham Collection</a></li>
-    <li><a href="#" onclick="navTo('classic');closeMenu();">The Classic Collection</a></li>
-    <li><a href="#" onclick="navTo('scrunchie');closeMenu();">The Scrunchie Collection</a></li>
-    <li><a href="#" onclick="navTo('garden');closeMenu();">The Garden Collection</a></li>
-    <li><a href="#" onclick="navTo('beach');closeMenu();">The Beach Collection</a></li>
-    <li><a href="#" onclick="navTo('essentials');closeMenu();">Ever Essentials</a></li>
-    <li><a href="#" onclick="navTo('beach');closeMenu();">Shop All</a></li>
-    <li><a href="#" onclick="showPage('about-page');closeMenu();">About</a></li>
-    <li><a href="#" onclick="showPage('contact-page');closeMenu();">Contact</a></li>
-  </ul>
-</div>
 
 <!-- ══ MAIN PAGE ══ -->
 <div id="main-page" class="page active">
 
-  <!-- HERO -->
-  <section class="hero">
-    <img src="img/logo-new.png" alt="Ever Near — Handmade in Southern California" class="hero-logo"/>
+  <div class="announce-bar announce-bar--beige">
+    Free shipping on orders over $70 &nbsp;·&nbsp; Handmade in San Diego, CA
+  </div>
 
-    <!-- Lifestyle Carousel -->
-    <div class="hero-carousel" id="hero-carousel">
-      <div class="hero-carousel-track" id="hero-carousel-track"></div>
-    </div>
-    <div class="hero-divider"></div>
-    <p class="hero-tagline">Handcrafted &nbsp;·&nbsp; Small Batch</p>
-    <button class="btn-primary" onclick="navTo('essentials')">Shop the Collection</button>
+  <div style="background: var(--off-white);">
+    <header class="site-header">
+      <nav class="header-nav">
+        <a href="cosmetic-bags.html">Cosmetic Bags</a>
+        <a href="evening-bags.html">Evening Bags</a>
+        <a href="#about" class="hide-mobile">About</a>
+      </nav>
+      <a href="index.html" class="header-logo" aria-label="Ever Near home">
+        <img src="img/logo-dark.png" alt="Ever Near">
+      </a>
+      <nav class="header-nav header-nav--right">
+        <button class="cart-trigger" onclick="toggleCart()" aria-label="Open cart">
+          <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          Cart
+          <span class="cart-badge" id="cart-badge">0</span>
+        </button>
+      </nav>
+    </header>
+  </div>
+
+  <!-- Split Hero -->
+  <section class="split-hero">
+    <a href="cosmetic-bags.html" class="hero-panel hero-panel--day">
+      <img src="img/hero-day-vanity-cosmetic-bag.jpg" alt="Quilted blue toile cosmetic bag on a marble vanity" style="object-position: 50% 100%">
+      <div class="hero-panel__content">
+        <span class="hero-panel__title">Cosmetic Bags</span>
+        <span class="hero-panel__link">Shop the everyday</span>
+      </div>
+    </a>
+    <a href="evening-bags.html" class="hero-panel hero-panel--night">
+      <img src="img/hero-night-candlelit-satin-mini.jpg" alt="Burgundy satin evening bag with beaded fringe on a candlelit dinner table" style="object-position: 50% 40%">
+      <span class="hero-panel__overlay" aria-hidden="true"></span>
+      <div class="hero-panel__content">
+        <span class="hero-panel__title">Evening Bags</span>
+        <span class="hero-panel__link">Shop for the night</span>
+      </div>
+    </a>
   </section>
 
-  <!-- CUSTOM EMBROIDERED -->
-  <div class="shop-section bg-tint" id="custom">
-    <div class="section-inner">
-      <p class="section-eyebrow">Made to Order</p>
-      <h2 class="section-title">Custom Embroidered Bags</h2>
-      <div class="section-divider"></div>
-      <div class="product-grid"></div>
+  <!-- Newest Pieces -->
+  <section class="newest-section">
+    <div class="section-header-row">
+      <h2 class="section-h2">Newest pieces</h2>
+      <a href="cosmetic-bags.html" class="section-link">Shop all</a>
     </div>
-  </div>
-
-  <!-- GINGHAM COLLECTION -->
-  <div class="shop-section bg-main" id="gingham">
-    <div class="section-inner">
-      <p class="section-eyebrow">Collection No. 1</p>
-      <h2 class="section-title">The Gingham Collection</h2>
-      <div class="section-divider"></div>
-      <div class="product-grid">
-        <div class="product-card fade-in" onclick="openProduct('blueberry')">
-          <div class="product-carousel"><div class="carousel-track" id="track-4"><div class="carousel-slide"><img src="img/blueberry-1.jpg" alt="Blueberry"/></div></div></div>
-          <div class="product-info">
-            <div class="product-meta-row"><span class="product-sizes">Le Classique</span><span class="product-price">$46</span></div>
-            <p class="product-name">Blueberry</p>
-          </div>
-        </div>
-        <div class="product-card fade-in" onclick="openProduct('strawberry-shortcake')">
-          <div class="product-carousel"><div class="carousel-track" id="track-5"><div class="carousel-slide"><img src="img/strawberry-shortcake-1.jpg" alt="Strawberry Shortcake"/></div></div></div>
-          <div class="product-info">
-            <div class="product-meta-row"><span class="product-sizes">Le Classique</span><span class="product-price">$46</span></div>
-            <p class="product-name">Strawberry Shortcake</p>
-          </div>
-        </div>
-        <div class="product-card fade-in" onclick="openProduct('vanilla-creme')">
-          <div class="product-carousel"><div class="carousel-track" id="track-6"><div class="carousel-slide"><img src="img/vanilla-creme-1.jpg" alt="Vanilla Crème"/></div></div></div>
-          <div class="product-info">
-            <div class="product-meta-row"><span class="product-sizes">Le Classique</span><span class="product-price">$46</span></div>
-            <p class="product-name">Vanilla Crème</p>
-          </div>
-        </div>
-      </div>
+    <div class="newest-grid" id="newest-products-grid">
+      <!-- populated by homepage.js -->
     </div>
-  </div>
+  </section>
 
-  <!-- CLASSIC COLLECTION -->
-  <div class="shop-section bg-tint" id="classic">
-    <div class="section-inner">
-      <p class="section-eyebrow">Collection No. 2</p>
-      <h2 class="section-title">The Classic Collection</h2>
-      <div class="section-divider"></div>
-      <div class="product-grid">
-        <div class="product-card fade-in" onclick="openProduct('midnight-dot')">
-          <div class="product-carousel">
-            <div class="carousel-track" id="track-9">
-              <div class="carousel-slide"><img src="img/midnight-dot-1.jpg" alt="Midnight Dot"/></div>
-              <div class="carousel-slide"><img src="img/midnight-dot-2.jpg" alt="Midnight Dot sizes"/></div>
-            </div>
-            <button class="carousel-btn prev" onclick="event.stopPropagation();slide(9,-1)">&#8249;</button>
-            <button class="carousel-btn next" onclick="event.stopPropagation();slide(9,1)">&#8250;</button>
-          </div>
-          <div class="carousel-dots" id="dots-9">
-            <span class="dot active" onclick="event.stopPropagation();goTo(9,0)"></span>
-            <span class="dot" onclick="event.stopPropagation();goTo(9,1)"></span>
-          </div>
-          <div class="product-info">
-            <div class="product-meta-row">
-              <span class="product-sizes">Le Classique &nbsp;·&nbsp; Le Voyage</span>
-              <span class="product-price">From $45</span>
-            </div>
-            <p class="product-name">Midnight Dot</p>
-          </div>
-        </div>
-        <div class="product-card fade-in" onclick="openProduct('ivory-dot')">
-          <div class="product-carousel">
-            <div class="carousel-track" id="track-10">
-              <div class="carousel-slide"><img src="img/ivory-dot-1.jpg" alt="Ivory Dot"/></div>
-              <div class="carousel-slide"><img src="img/ivory-dot-2.jpg" alt="Ivory Dot sizes"/></div>
-            </div>
-            <button class="carousel-btn prev" onclick="event.stopPropagation();slide(10,-1)">&#8249;</button>
-            <button class="carousel-btn next" onclick="event.stopPropagation();slide(10,1)">&#8250;</button>
-          </div>
-          <div class="carousel-dots" id="dots-10">
-            <span class="dot active" onclick="event.stopPropagation();goTo(10,0)"></span>
-            <span class="dot" onclick="event.stopPropagation();goTo(10,1)"></span>
-          </div>
-          <div class="product-info">
-            <div class="product-meta-row">
-              <span class="product-sizes">Le Classique &nbsp;·&nbsp; Le Voyage</span>
-              <span class="product-price">From $45</span>
-            </div>
-            <p class="product-name">Ivory Dot</p>
-          </div>
-        </div>
-        <div class="product-card fade-in" onclick="openProduct('cherry-blossom')">
-          <div class="product-carousel">
-            <div class="carousel-track" id="track-11">
-              <div class="carousel-slide"><img src="img/cherry-blossom-1.jpg" alt="Cherry Blossom"/></div>
-              <div class="carousel-slide"><img src="img/cherry-blossom-2.jpg" alt="Cherry Blossom open"/></div>
-            </div>
-            <button class="carousel-btn prev" onclick="event.stopPropagation();slide(11,-1)">&#8249;</button>
-            <button class="carousel-btn next" onclick="event.stopPropagation();slide(11,1)">&#8250;</button>
-          </div>
-          <div class="carousel-dots" id="dots-11">
-            <span class="dot active" onclick="event.stopPropagation();goTo(11,0)"></span>
-            <span class="dot" onclick="event.stopPropagation();goTo(11,1)"></span>
-          </div>
-          <div class="product-info">
-            <div class="product-meta-row">
-              <span class="product-sizes">Le Classique</span>
-              <span class="product-price">$46</span>
-            </div>
-            <p class="product-name">Cherry Blossom</p>
-          </div>
-        </div>
-      </div>
+  <!-- Tagline Band -->
+  <section class="tagline-band">
+    <p>Handmade accessories, from morning to evening.</p>
+  </section>
+
+  <!-- Instagram -->
+  <section class="instagram-section">
+    <span class="insta-eyebrow insta-eyebrow--day">On Instagram</span>
+    <h2 class="insta-h2 insta-h2--day">Follow along the journey</h2>
+    <p class="insta-desc insta-desc--day">Behind the scenes from the sewing studio, new drops first, and the Ever Near Diaries.</p>
+    <a href="https://www.instagram.com/evernearhandmade/" class="insta-handle insta-handle--day" target="_blank" rel="noopener">@evernearhandmade</a>
+    <div class="insta-grid">
+      <a href="https://www.instagram.com/evernearhandmade/" target="_blank" rel="noopener">
+        <img src="img/hero-day-vanity-cosmetic-bag.jpg" alt="Blue toile cosmetic bag on a marble vanity" loading="lazy">
+      </a>
+      <a href="https://www.instagram.com/evernearhandmade/" target="_blank" rel="noopener">
+        <img src="img/satin-minis-golden-hour.jpg" alt="Satin mini evening bags in golden light" loading="lazy">
+      </a>
+      <a href="https://www.instagram.com/evernearhandmade/" target="_blank" rel="noopener">
+        <img src="img/toile-bag-skincare.jpg" alt="Blue toile cosmetic bag with skincare" loading="lazy">
+      </a>
+      <a href="https://www.instagram.com/evernearhandmade/" target="_blank" rel="noopener">
+        <img src="img/instagram-satin-dinner.jpg" alt="Satin evening bag at a candlelit dinner" loading="lazy">
+      </a>
     </div>
-  </div>
+  </section>
 
-  <!-- SCRUNCHIE COLLECTION -->
-  <div class="shop-section bg-main" id="scrunchie">
-    <div class="section-inner">
-      <p class="section-eyebrow">Collection No. 3</p>
-      <h2 class="section-title">The Scrunchie Collection</h2>
-      <div class="section-divider"></div>
-      <div class="product-grid"></div>
-    </div>
-  </div>
+  <!-- About anchor -->
+  <div id="about" style="scroll-margin-top: 80px;"></div>
 
-  <!-- GARDEN COLLECTION -->
-  <div class="shop-section bg-tint" id="garden">
-    <div class="section-inner">
-      <p class="section-eyebrow">Collection No. 4</p>
-      <h2 class="section-title">The Garden Collection</h2>
-      <div class="section-divider"></div>
-      <div class="product-grid">
-        <div class="product-card fade-in" onclick="openProduct('bluebell-garden')">
-          <div class="product-carousel">
-            <div class="carousel-track" id="track-7">
-              <div class="carousel-slide"><img src="img/bluebell-garden-classique.jpg" alt="Bluebell Le Classique"/></div>
-              <div class="carousel-slide"><img src="img/bluebell-garden-essentials.jpg" alt="Bluebell Le Essentials"/></div>
-            </div>
-            <button class="carousel-btn prev" onclick="event.stopPropagation();slide(7,-1)">&#8249;</button>
-            <button class="carousel-btn next" onclick="event.stopPropagation();slide(7,1)">&#8250;</button>
-          </div>
-          <div class="carousel-dots" id="dots-7">
-            <span class="dot active" onclick="event.stopPropagation();goTo(7,0)"></span>
-            <span class="dot" onclick="event.stopPropagation();goTo(7,1)"></span>
-          </div>
-          <div class="product-info">
-            <div class="product-meta-row"><span class="product-sizes">Le Classique</span><span class="product-price">From $32</span></div>
-            <p class="product-name">Bluebell</p>
-          </div>
-        </div>
-        <div class="product-card fade-in" onclick="openProduct('petal-garden')">
-          <div class="product-carousel">
-            <div class="carousel-track" id="track-8">
-              <div class="carousel-slide"><img src="img/petal-garden-classique.jpg" alt="Petal Le Classique"/></div>
-              <div class="carousel-slide"><img src="img/petal-garden-essentials.jpg" alt="Petal Le Essentials"/></div>
-            </div>
-            <button class="carousel-btn prev" onclick="event.stopPropagation();slide(8,-1)">&#8249;</button>
-            <button class="carousel-btn next" onclick="event.stopPropagation();slide(8,1)">&#8250;</button>
-          </div>
-          <div class="carousel-dots" id="dots-8">
-            <span class="dot active" onclick="event.stopPropagation();goTo(8,0)"></span>
-            <span class="dot" onclick="event.stopPropagation();goTo(8,1)"></span>
-          </div>
-          <div class="product-info">
-            <div class="product-meta-row"><span class="product-sizes">Le Classique</span><span class="product-price">From $32</span></div>
-            <p class="product-name">Petal</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- BEACH COLLECTION -->
-  <div class="shop-section bg-main" id="beach">
-    <div class="section-inner">
-      <p class="section-eyebrow">Collection No. 5</p>
-      <h2 class="section-title">The Beach Collection</h2>
-      <div class="section-divider"></div>
-      <div class="product-grid"></div>
-    </div>
-  </div>
-
-  <!-- EVER ESSENTIALS -->
-  <div class="shop-section bg-tint" id="essentials">
-    <div class="section-inner">
-      <p class="section-eyebrow">Collection No. 6</p>
-      <h2 class="section-title">Ever Essentials</h2>
-      <div class="section-divider"></div>
-      <div class="product-grid-4">
-        <div class="product-card fade-in" onclick="openProduct('pink')">
-          <div class="product-carousel"><div class="carousel-track" id="track-0"><div class="carousel-slide"><img src="img/pink-1.jpg" alt="Pink"/></div></div></div>
-          <div class="product-info"><div class="product-meta-row"><span class="product-sizes">Le Essentials</span><span class="product-price">$32</span></div><p class="product-name">Pink</p></div>
-        </div>
-        <div class="product-card fade-in" onclick="openProduct('sorbet')">
-          <div class="product-carousel"><div class="carousel-track" id="track-1"><div class="carousel-slide"><img src="img/sorbet-1.jpg" alt="Sorbet"/></div></div></div>
-          <div class="product-info"><div class="product-meta-row"><span class="product-sizes">Le Essentials</span><span class="product-price">$32</span></div><p class="product-name">Sorbet</p></div>
-        </div>
-        <div class="product-card fade-in" onclick="openProduct('bluebell-essential')">
-          <div class="product-carousel"><div class="carousel-track" id="track-2"><div class="carousel-slide"><img src="img/bluebell-garden-essentials.jpg" alt="Bluebell"/></div></div></div>
-          <div class="product-info"><div class="product-meta-row"><span class="product-sizes">Le Essentials</span><span class="product-price">$32</span></div><p class="product-name">Bluebell</p></div>
-        </div>
-        <div class="product-card fade-in" onclick="openProduct('petal-essential')">
-          <div class="product-carousel"><div class="carousel-track" id="track-3"><div class="carousel-slide"><img src="img/petal-garden-essentials.jpg" alt="Petal"/></div></div></div>
-          <div class="product-info"><div class="product-meta-row"><span class="product-sizes">Le Essentials</span><span class="product-price">$32</span></div><p class="product-name">Petal</p></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <footer>
-    <img src="img/logo.png" alt="Ever Near" class="footer-logo"/>
-    <ul class="footer-links">
-      <li><a onclick="navTo('gingham')">Gingham</a></li>
-      <li><a onclick="navTo('classic')">Classic</a></li>
-      <li><a onclick="navTo('scrunchie')">Scrunchie</a></li>
-      <li><a onclick="navTo('garden')">Garden</a></li>
-      <li><a onclick="navTo('beach')">Beach</a></li>
-      <li><a onclick="navTo('essentials')">Essentials</a></li>
-      <li><a onclick="showPage('about-page')">About</a></li>
-      <li><a onclick="showPage('contact-page')">Contact</a></li>
-    </ul>
-    <p class="footer-copy">&copy; 2026 Ever Near. All rights reserved.</p>
+  <footer class="site-footer" style="border-top: 1px solid rgba(154,160,184,0.2); margin-top: 32px;">
+    <a href="index.html" class="footer-logo">
+      <img src="img/logo-dark.png" alt="Ever Near">
+    </a>
+    <nav class="footer-nav">
+      <a href="cosmetic-bags.html">Cosmetic Bags</a>
+      <a href="evening-bags.html">Evening Bags</a>
+      <a href="https://www.instagram.com/evernearhandmade/" target="_blank" rel="noopener">@evernearhandmade</a>
+    </nav>
   </footer>
 
 </div><!-- end main-page -->
@@ -333,51 +152,6 @@
   </div>
 </div>
 
-<!-- ══ CONTACT PAGE ══ -->
-<div id="contact-page" class="page">
-  <div class="contact-inner">
-    <button class="product-page-back" onclick="showPage('main-page')">
-      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
-      Back
-    </button>
-    <div class="contact-content">
-      <p class="section-eyebrow">Say Hello</p>
-      <h2 class="section-title">Get in Touch</h2>
-      <div class="section-divider"></div>
-      <div class="contact-text">
-        <p>Whether you have a question, are interested in a custom order, or just want to say hello — we'd love to hear from you.</p>
-        <p class="contact-email-label">Reach us at</p>
-        <a href="mailto:evernear.co@gmail.com" class="contact-email">evernear.co@gmail.com</a>
-        <p class="contact-note">We'll do our best to get back to you within 24–48 hours.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ══ ABOUT PAGE ══ -->
-<div id="about-page" class="page">
-  <div class="contact-inner">
-    <button class="product-page-back" onclick="showPage('main-page')">
-      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
-      Back
-    </button>
-    <div class="contact-content">
-      <p class="section-eyebrow">Our Story</p>
-      <h2 class="section-title">Made with love in Southern California</h2>
-      <div class="section-divider"></div>
-      <div class="about-text">
-        <p>Ever Near came from a simple realization: even before I knew God, He was always there.</p>
-        <p>I wasn't raised Christian, but as I've grown closer in my faith, I've started to look back and see things differently. Moments that felt random now feel guided. Things that once felt uncertain feel a little more held. Ever Near is a reminder of that.</p>
-        <p>This brand is also inspired by the getting-ready process — whether it's a girls' dinner, date night, or just getting ready for bed. I wanted to create something beautiful for those quiet, personal moments — a special piece meant to come with you for whatever your day brings. Because everyone deserves to romanticize their daily routine.</p>
-        <p>Every bag is sewn by hand, designed to be part of your daily life — holding what you need while feeling personal, chic, and put together.</p>
-        <p>Ever Near is about faith, femininity, and the quiet ways both show up in our lives — always close, always with you.</p>
-        <p>Whatever brought you here — and wherever you are in your own journey — I'm so glad you're here.</p>
-        <p class="about-signoff">With love,<br>Devin</p>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- ══ CART DRAWER ══ -->
 <div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
 <div class="cart-drawer" id="cart-drawer">
@@ -405,15 +179,13 @@
   </div>
 </div>
 
-  <script src="js/config.js?v=8"></script>
-  <script src="js/products.js?v=8"></script>
-  <script src="js/shopify-api.js?v=8"></script>
-  <script src="js/carousel.js?v=8"></script>
-  <script src="js/navigation.js?v=9"></script>
-  <script src="js/product-detail.js?v=9"></script>
-  <script src="js/product-listing.js?v=8"></script>
-  <script src="js/cart.js?v=9"></script>
-  <script src="js/hero-carousel.js?v=8"></script>
-  <script src="js/main.js?v=8"></script>
+<script src="js/config.js?v=1"></script>
+<script src="js/products.js?v=1"></script>
+<script src="js/shopify-api.js?v=2"></script>
+<script src="js/navigation.js?v=1"></script>
+<script src="js/product-detail.js?v=1"></script>
+<script src="js/product-listing.js?v=1"></script>
+<script src="js/cart.js?v=1"></script>
+<script src="js/homepage.js?v=1"></script>
 </body>
 </html>

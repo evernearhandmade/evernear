@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cosmetic Bags — Ever Near</title>
+  <meta name="description" content="Handcrafted quilted cosmetic bags in small batches. Shop the Gingham, Classic, Garden, Scrunchie and Beach collections.">
+  <meta property="og:title" content="Cosmetic Bags — Ever Near">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://evernearhandmade.com/cosmetic-bags.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/theme.css?v=1">
+</head>
+<body>
+
+<!-- ══ MAIN PAGE ══ -->
+<div id="main-page" class="page active">
+
+  <div class="announce-bar announce-bar--blue">
+    Free shipping on orders over $70 &nbsp;·&nbsp; Handmade in San Diego, CA
+  </div>
+
+  <div style="background: var(--off-white);">
+    <header class="site-header">
+      <nav class="header-nav">
+        <a href="cosmetic-bags.html" class="current">Cosmetic Bags</a>
+        <a href="evening-bags.html">Evening Bags</a>
+        <a href="index.html#about" class="hide-mobile">About</a>
+      </nav>
+      <a href="index.html" class="header-logo" aria-label="Ever Near home">
+        <img src="img/logo-dark.png" alt="Ever Near">
+      </a>
+      <nav class="header-nav header-nav--right">
+        <button class="cart-trigger" onclick="toggleCart()" aria-label="Open cart">
+          <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          Cart
+          <span class="cart-badge" id="cart-badge">0</span>
+        </button>
+      </nav>
+    </header>
+  </div>
+
+  <!-- Header Band -->
+  <section class="cb-header-band">
+    <h1>Cosmetic Bags</h1>
+    <p>Quilted and sewn by hand, for your getting-ready routine and every small moment in between.</p>
+  </section>
+
+  <!-- Filter Pills -->
+  <div class="filter-pills-wrap">
+    <nav class="filter-pills" aria-label="Filter collections">
+      <button class="pill active" onclick="filterSection('all', this)">All</button>
+      <button class="pill" onclick="filterSection('scrunchie', this)">*New</button>
+      <button class="pill" onclick="filterSection('classic', this)">Classic</button>
+      <button class="pill" onclick="filterSection('gingham', this)">Gingham</button>
+      <button class="pill" onclick="filterSection('garden', this)">Garden</button>
+      <button class="pill" onclick="filterSection('beach', this)">Beach</button>
+      <button class="pill" onclick="filterSection('essentials', this)">Essentials</button>
+      <button class="pill" onclick="filterSection('custom', this)">Custom</button>
+    </nav>
+  </div>
+
+  <!-- SCRUNCHIE COLLECTION (*New) -->
+  <div class="cb-collection" id="scrunchie" data-section>
+    <div class="cb-collection-header">
+      <span class="new-badge">*New</span>
+      <h2 class="cb-collection-title">The Scrunchie Collection</h2>
+    </div>
+    <p class="cb-collection-desc" id="scrunchie-desc">Matching scrunchies and add-ons made from the same fabrics as your favourite bags.</p>
+    <div class="product-grid" id="scrunchie-grid"></div>
+  </div>
+
+  <!-- GINGHAM COLLECTION -->
+  <div class="cb-collection" id="gingham" data-section>
+    <div class="cb-collection-header">
+      <h2 class="cb-collection-title">The Gingham Collection</h2>
+    </div>
+    <p class="cb-collection-desc" id="gingham-desc">Classic gingham in soft, cheerful colourways — a little playful, a little timeless.</p>
+    <div class="product-grid" id="gingham-grid">
+      <div class="product-card fade-in" onclick="openProduct('blueberry')">
+        <div class="product-carousel"><div class="carousel-track" id="track-4"><div class="carousel-slide"><img src="img/blueberry-1.jpg" alt="Blueberry" loading="lazy"></div></div></div>
+        <span class="product-card-sizes">Le Classique</span>
+        <span class="product-card-name">Blueberry</span>
+        <span class="product-card-price">$46</span>
+      </div>
+      <div class="product-card fade-in" onclick="openProduct('strawberry-shortcake')">
+        <div class="product-carousel"><div class="carousel-track" id="track-5"><div class="carousel-slide"><img src="img/strawberry-shortcake-1.jpg" alt="Strawberry Shortcake" loading="lazy"></div></div></div>
+        <span class="product-card-sizes">Le Classique</span>
+        <span class="product-card-name">Strawberry Shortcake</span>
+        <span class="product-card-price">$46</span>
+      </div>
+      <div class="product-card fade-in" onclick="openProduct('vanilla-creme')">
+        <div class="product-carousel"><div class="carousel-track" id="track-6"><div class="carousel-slide"><img src="img/vanilla-creme-1.jpg" alt="Vanilla Crème" loading="lazy"></div></div></div>
+        <span class="product-card-sizes">Le Classique</span>
+        <span class="product-card-name">Vanilla Crème</span>
+        <span class="product-card-price">$46</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CLASSIC COLLECTION -->
+  <div class="cb-collection" id="classic" data-section>
+    <div class="cb-collection-header">
+      <h2 class="cb-collection-title">The Classic Collection</h2>
+    </div>
+    <p class="cb-collection-desc" id="classic-desc">Timeless prints on quilted cotton — the bags that started it all.</p>
+    <div class="product-grid" id="classic-grid">
+      <div class="product-card fade-in" onclick="openProduct('midnight-dot')">
+        <div class="product-carousel">
+          <div class="carousel-track" id="track-9">
+            <div class="carousel-slide"><img src="img/midnight-dot-1.jpg" alt="Midnight Dot" loading="lazy"></div>
+            <div class="carousel-slide"><img src="img/midnight-dot-2.jpg" alt="Midnight Dot sizes" loading="lazy"></div>
+          </div>
+          <button class="carousel-btn prev" onclick="event.stopPropagation();slide(9,-1)">&#8249;</button>
+          <button class="carousel-btn next" onclick="event.stopPropagation();slide(9,1)">&#8250;</button>
+        </div>
+        <div class="carousel-dots" id="dots-9">
+          <span class="dot active" onclick="event.stopPropagation();goTo(9,0)"></span>
+          <span class="dot" onclick="event.stopPropagation();goTo(9,1)"></span>
+        </div>
+        <span class="product-card-sizes">Le Classique &nbsp;·&nbsp; Le Voyage</span>
+        <span class="product-card-name">Midnight Dot</span>
+        <span class="product-card-price">From $45</span>
+      </div>
+      <div class="product-card fade-in" onclick="openProduct('ivory-dot')">
+        <div class="product-carousel">
+          <div class="carousel-track" id="track-10">
+            <div class="carousel-slide"><img src="img/ivory-dot-1.jpg" alt="Ivory Dot" loading="lazy"></div>
+            <div class="carousel-slide"><img src="img/ivory-dot-2.jpg" alt="Ivory Dot sizes" loading="lazy"></div>
+          </div>
+          <button class="carousel-btn prev" onclick="event.stopPropagation();slide(10,-1)">&#8249;</button>
+          <button class="carousel-btn next" onclick="event.stopPropagation();slide(10,1)">&#8250;</button>
+        </div>
+        <div class="carousel-dots" id="dots-10">
+          <span class="dot active" onclick="event.stopPropagation();goTo(10,0)"></span>
+          <span class="dot" onclick="event.stopPropagation();goTo(10,1)"></span>
+        </div>
+        <span class="product-card-sizes">Le Classique &nbsp;·&nbsp; Le Voyage</span>
+        <span class="product-card-name">Ivory Dot</span>
+        <span class="product-card-price">From $45</span>
+      </div>
+      <div class="product-card fade-in" onclick="openProduct('cherry-blossom')">
+        <div class="product-carousel">
+          <div class="carousel-track" id="track-11">
+            <div class="carousel-slide"><img src="img/cherry-blossom-1.jpg" alt="Cherry Blossom" loading="lazy"></div>
+            <div class="carousel-slide"><img src="img/cherry-blossom-2.jpg" alt="Cherry Blossom open" loading="lazy"></div>
+          </div>
+          <button class="carousel-btn prev" onclick="event.stopPropagation();slide(11,-1)">&#8249;</button>
+          <button class="carousel-btn next" onclick="event.stopPropagation();slide(11,1)">&#8250;</button>
+        </div>
+        <div class="carousel-dots" id="dots-11">
+          <span class="dot active" onclick="event.stopPropagation();goTo(11,0)"></span>
+          <span class="dot" onclick="event.stopPropagation();goTo(11,1)"></span>
+        </div>
+        <span class="product-card-sizes">Le Classique</span>
+        <span class="product-card-name">Cherry Blossom</span>
+        <span class="product-card-price">$46</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- GARDEN COLLECTION -->
+  <div class="cb-collection" id="garden" data-section>
+    <div class="cb-collection-header">
+      <h2 class="cb-collection-title">The Garden Collection</h2>
+    </div>
+    <p class="cb-collection-desc" id="garden-desc">Floral and botanical prints that feel fresh every season.</p>
+    <div class="product-grid" id="garden-grid">
+      <div class="product-card fade-in" onclick="openProduct('bluebell-garden')">
+        <div class="product-carousel">
+          <div class="carousel-track" id="track-7">
+            <div class="carousel-slide"><img src="img/bluebell-garden-classique.jpg" alt="Bluebell Le Classique" loading="lazy"></div>
+            <div class="carousel-slide"><img src="img/bluebell-garden-essentials.jpg" alt="Bluebell Le Essentials" loading="lazy"></div>
+          </div>
+          <button class="carousel-btn prev" onclick="event.stopPropagation();slide(7,-1)">&#8249;</button>
+          <button class="carousel-btn next" onclick="event.stopPropagation();slide(7,1)">&#8250;</button>
+        </div>
+        <div class="carousel-dots" id="dots-7">
+          <span class="dot active" onclick="event.stopPropagation();goTo(7,0)"></span>
+          <span class="dot" onclick="event.stopPropagation();goTo(7,1)"></span>
+        </div>
+        <span class="product-card-sizes">Le Classique</span>
+        <span class="product-card-name">Bluebell</span>
+        <span class="product-card-price">From $32</span>
+      </div>
+      <div class="product-card fade-in" onclick="openProduct('petal-garden')">
+        <div class="product-carousel">
+          <div class="carousel-track" id="track-8">
+            <div class="carousel-slide"><img src="img/petal-garden-classique.jpg" alt="Petal Le Classique" loading="lazy"></div>
+            <div class="carousel-slide"><img src="img/petal-garden-essentials.jpg" alt="Petal Le Essentials" loading="lazy"></div>
+          </div>
+          <button class="carousel-btn prev" onclick="event.stopPropagation();slide(8,-1)">&#8249;</button>
+          <button class="carousel-btn next" onclick="event.stopPropagation();slide(8,1)">&#8250;</button>
+        </div>
+        <div class="carousel-dots" id="dots-8">
+          <span class="dot active" onclick="event.stopPropagation();goTo(8,0)"></span>
+          <span class="dot" onclick="event.stopPropagation();goTo(8,1)"></span>
+        </div>
+        <span class="product-card-sizes">Le Classique</span>
+        <span class="product-card-name">Petal</span>
+        <span class="product-card-price">From $32</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BEACH COLLECTION -->
+  <div class="cb-collection" id="beach" data-section>
+    <div class="cb-collection-header">
+      <h2 class="cb-collection-title">The Beach Collection</h2>
+    </div>
+    <p class="cb-collection-desc" id="beach-desc">Sun-washed hues and breezy prints for your summer essentials.</p>
+    <div class="product-grid" id="beach-grid"></div>
+  </div>
+
+  <!-- ESSENTIALS -->
+  <div class="cb-collection" id="essentials" data-section>
+    <div class="cb-collection-header">
+      <h2 class="cb-collection-title">Ever Essentials</h2>
+    </div>
+    <p class="cb-collection-desc" id="essentials-desc">The compact Le Essentials pouch — the perfect grab-and-go size.</p>
+    <div class="product-grid" id="essentials-grid">
+      <div class="product-card fade-in" onclick="openProduct('pink')">
+        <div class="product-carousel"><div class="carousel-track" id="track-0"><div class="carousel-slide"><img src="img/pink-1.jpg" alt="Pink" loading="lazy"></div></div></div>
+        <span class="product-card-sizes">Le Essentials</span>
+        <span class="product-card-name">Pink</span>
+        <span class="product-card-price">$32</span>
+      </div>
+      <div class="product-card fade-in" onclick="openProduct('sorbet')">
+        <div class="product-carousel"><div class="carousel-track" id="track-1"><div class="carousel-slide"><img src="img/sorbet-1.jpg" alt="Sorbet" loading="lazy"></div></div></div>
+        <span class="product-card-sizes">Le Essentials</span>
+        <span class="product-card-name">Sorbet</span>
+        <span class="product-card-price">$32</span>
+      </div>
+      <div class="product-card fade-in" onclick="openProduct('bluebell-essential')">
+        <div class="product-carousel"><div class="carousel-track" id="track-2"><div class="carousel-slide"><img src="img/bluebell-garden-essentials.jpg" alt="Bluebell" loading="lazy"></div></div></div>
+        <span class="product-card-sizes">Le Essentials</span>
+        <span class="product-card-name">Bluebell</span>
+        <span class="product-card-price">$32</span>
+      </div>
+      <div class="product-card fade-in" onclick="openProduct('petal-essential')">
+        <div class="product-carousel"><div class="carousel-track" id="track-3"><div class="carousel-slide"><img src="img/petal-garden-essentials.jpg" alt="Petal" loading="lazy"></div></div></div>
+        <span class="product-card-sizes">Le Essentials</span>
+        <span class="product-card-name">Petal</span>
+        <span class="product-card-price">$32</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CUSTOM EMBROIDERED -->
+  <div class="cb-collection" id="custom" data-section>
+    <div class="cb-collection-header">
+      <h2 class="cb-collection-title">Custom Embroidered</h2>
+    </div>
+    <p class="cb-collection-desc" id="custom-desc">Your name, monogram or initials, hand-embroidered on the bag of your choice. Made to order.</p>
+    <div class="product-grid" id="custom-grid"></div>
+  </div>
+
+  <!-- Evening Bags Cross-promo -->
+  <div class="evening-promo">
+    <a href="evening-bags.html">
+      <span>
+        <span class="evening-promo-eyebrow">Going out tonight?</span>
+        <span class="evening-promo-title">Discover our evening bags</span>
+      </span>
+      <span class="evening-promo-cta">Shop Evening Bags</span>
+    </a>
+  </div>
+
+  <footer class="site-footer" style="border-top: 1px solid rgba(154,160,184,0.2); margin-top: 64px;">
+    <a href="index.html" class="footer-logo">
+      <img src="img/logo-dark.png" alt="Ever Near">
+    </a>
+    <nav class="footer-nav">
+      <a href="cosmetic-bags.html">Cosmetic Bags</a>
+      <a href="evening-bags.html">Evening Bags</a>
+      <a href="https://www.instagram.com/evernearhandmade/" target="_blank" rel="noopener">@evernearhandmade</a>
+    </nav>
+  </footer>
+
+</div><!-- end main-page -->
+
+<!-- ══ PRODUCT PAGE ══ -->
+<div id="product-page" class="page">
+  <div class="product-page-inner">
+    <button class="product-page-back" onclick="closeProduct()">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      Back
+    </button>
+    <div class="product-page-layout">
+      <div class="pp-gallery">
+        <img id="pp-main-img" class="pp-main-img" src="" alt=""/>
+        <div class="pp-thumbs" id="pp-thumbs"></div>
+      </div>
+      <div class="pp-info">
+        <p class="pp-collection" id="pp-collection"></p>
+        <h1 class="pp-name" id="pp-name"></h1>
+        <p class="pp-price" id="pp-price"></p>
+        <div class="pp-divider"></div>
+        <p class="pp-size-label">Select Size</p>
+        <div class="pp-sizes" id="pp-sizes"></div>
+        <p class="pp-description" id="pp-description"></p>
+        <p class="pp-dimensions-label">Dimensions</p>
+        <p class="pp-dimensions" id="pp-dimensions"></p>
+        <p class="pp-details" id="pp-details"></p>
+        <div class="pp-custom-text-wrap" id="pp-custom-text-wrap" style="display:none;">
+          <label class="pp-custom-text-label" for="pp-custom-text">Embroidery Text</label>
+          <input class="pp-custom-text-input" id="pp-custom-text" type="text" maxlength="30" placeholder="e.g. your name or initials"/>
+          <p class="pp-custom-text-hint">Up to 30 characters · Appears on your bag exactly as entered</p>
+        </div>
+        <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+        <p class="cart-confirm" id="cart-confirm">Added to your cart ✓</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ CART DRAWER ══ -->
+<div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cart-drawer">
+  <div class="cart-drawer-header">
+    <div>
+      <span class="cart-drawer-title">Your Cart</span>
+      <span class="cart-drawer-count" id="cart-drawer-count"></span>
+    </div>
+    <button class="cart-drawer-close" onclick="closeCart()" aria-label="Close cart">
+      <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="cart-shipping-bar" id="cart-shipping-bar">
+    <p class="cart-shipping-bar-msg" id="cart-shipping-bar-msg"></p>
+    <div class="cart-shipping-track"><div class="cart-shipping-fill" id="cart-shipping-fill"></div></div>
+  </div>
+  <div class="cart-drawer-items" id="cart-drawer-items"></div>
+  <div class="cart-drawer-footer" id="cart-drawer-footer" style="display:none;">
+    <div class="cart-subtotal">
+      <span class="cart-subtotal-label">Subtotal</span>
+      <span class="cart-subtotal-amount" id="cart-subtotal">$0</span>
+    </div>
+    <p class="cart-shipping-note" id="cart-shipping-note">Shipping calculated at checkout</p>
+    <button class="cart-checkout-btn" id="cart-checkout-btn" onclick="initiateCheckout()">Checkout</button>
+  </div>
+</div>
+
+<script src="js/config.js?v=1"></script>
+<script src="js/products.js?v=1"></script>
+<script src="js/shopify-api.js?v=2"></script>
+<script src="js/carousel.js?v=1"></script>
+<script src="js/navigation.js?v=1"></script>
+<script src="js/product-detail.js?v=1"></script>
+<script src="js/product-listing.js?v=1"></script>
+<script src="js/cart.js?v=1"></script>
+<script>
+// Filter pills: scroll to section or show/hide all
+function filterSection(id, btn) {
+  document.querySelectorAll('.pill').forEach(function(p) { p.classList.remove('active'); });
+  btn.classList.add('active');
+  if (id === 'all') {
+    document.querySelectorAll('[data-section]').forEach(function(s) { s.style.display = ''; });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else {
+    document.querySelectorAll('[data-section]').forEach(function(s) { s.style.display = 'none'; });
+    var target = document.getElementById(id);
+    if (target) {
+      target.style.display = '';
+      setTimeout(function() {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 50);
+    }
+  }
+}
+
+// Fade-in observer
+var cbObserver = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(function(el) { cbObserver.observe(el); });
+
+// Load products from API
+loadProducts();
+</script>
+</body>
+</html>
