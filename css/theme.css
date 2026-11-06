@@ -826,96 +826,6 @@ button { cursor: pointer; }
   color: var(--text);
 }
 
-/* Coming Soon Band */
-.coming-soon-band {
-  background: var(--deep-plum);
-  padding: 72px 32px;
-  text-align: center;
-}
-.coming-soon-eyebrow {
-  display: block;
-  font-size: 11px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--gold);
-  font-weight: 500;
-  margin-bottom: 14px;
-}
-.coming-soon-h2 {
-  margin: 0;
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 500;
-  font-size: clamp(26px, 4vw, 40px);
-  color: var(--light-text);
-}
-.coming-soon-desc {
-  margin: 12px auto 8px;
-  max-width: 520px;
-  font-size: 15px;
-  line-height: 1.7;
-  color: var(--soft-text);
-}
-.coming-soon-next {
-  margin: 0 auto 28px;
-  max-width: 520px;
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: 20px;
-  color: var(--gold);
-}
-.coming-soon-form {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  max-width: 540px;
-  margin: 0 auto;
-}
-.coming-soon-form label {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-}
-.coming-soon-form input[type="email"] {
-  flex: 1 1 260px;
-  min-width: 0;
-  height: 50px;
-  padding: 0 18px;
-  border: 1px solid var(--plum-divider);
-  background: var(--off-white);
-  color: var(--product-name);
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  outline: none;
-  transition: border-color 0.2s;
-}
-.coming-soon-form input[type="email"]:focus { border-color: var(--gold); }
-.coming-soon-form button {
-  height: 50px;
-  padding: 0 28px;
-  border: none;
-  background: var(--gold);
-  color: var(--deep-plum);
-  font-family: 'Montserrat', sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  font-weight: 500;
-  transition: opacity 0.2s;
-}
-.coming-soon-form button:hover { opacity: 0.85; }
-.coming-soon-thanks {
-  color: var(--gold);
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: 18px;
-  margin-top: 12px;
-  display: none;
-}
-.coming-soon-thanks.show { display: block; }
-
 /* Evening shop cosmetic link */
 .evening-cosmetic-link {
   text-align: center;
@@ -1403,8 +1313,7 @@ button { cursor: pointer; }
   .instagram-section,
   .site-footer,
   .filter-pills-wrap,
-  .evening-promo,
-  .coming-soon-band { padding-left: 16px; padding-right: 16px; }
+  .evening-promo { padding-left: 16px; padding-right: 16px; }
 
   .evening-promo a { padding: 28px 24px; }
 
@@ -1414,9 +1323,6 @@ button { cursor: pointer; }
   .evening-story { flex-direction: column; }
   .evening-story-img { max-width: 100%; }
 
-  .coming-soon-form { flex-direction: column; align-items: stretch; }
-  .coming-soon-form input[type="email"],
-  .coming-soon-form button { width: 100%; }
 
   .header-nav { gap: 14px; font-size: 11px; }
 }

@@ -156,34 +156,4 @@ async function loadEveningBags() {
   });
 }
 
-// Email signup for the Coming Soon band
-function handleEmailSignup(e) {
-  e.preventDefault();
-  var input = document.getElementById('drop-email');
-  var btn = document.getElementById('drop-email-btn');
-  var thanks = document.getElementById('drop-email-thanks');
-  if (!input || !input.value.trim()) return;
-
-  btn.disabled = true;
-  btn.textContent = 'Joining…';
-
-  var email = input.value.trim();
-  var mutation = 'mutation { customerCreate(input: { email: "' + email.replace(/"/g, '') + '", acceptsMarketing: true }) { customer { id } customerUserErrors { message } } }';
-
-  shopifyFetch(mutation)
-    .then(function() {
-      input.value = '';
-      btn.style.display = 'none';
-      input.style.display = 'none';
-      if (thanks) { thanks.style.display = 'block'; }
-    })
-    .catch(function() {
-      // Even on error, show thanks — email was likely captured
-      input.value = '';
-      btn.style.display = 'none';
-      input.style.display = 'none';
-      if (thanks) { thanks.style.display = 'block'; }
-    });
-}
-
 loadEveningBags();
