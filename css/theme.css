@@ -826,6 +826,44 @@ button { cursor: pointer; }
   color: var(--text);
 }
 
+/* Coming Soon Band */
+.coming-soon-band {
+  background: var(--deep-plum);
+  padding: 72px 32px;
+  text-align: center;
+}
+.coming-soon-eyebrow {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+.coming-soon-h2 {
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: clamp(26px, 4vw, 40px);
+  color: var(--light-text);
+}
+.coming-soon-desc {
+  margin: 12px auto 8px;
+  max-width: 520px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--soft-text);
+}
+.coming-soon-next {
+  margin: 0 auto;
+  max-width: 520px;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 22px;
+  color: var(--gold);
+}
+
 /* Evening shop cosmetic link */
 .evening-cosmetic-link {
   text-align: center;
@@ -1313,7 +1351,8 @@ button { cursor: pointer; }
   .instagram-section,
   .site-footer,
   .filter-pills-wrap,
-  .evening-promo { padding-left: 16px; padding-right: 16px; }
+  .evening-promo,
+  .coming-soon-band { padding-left: 16px; padding-right: 16px; }
 
   .evening-promo a { padding: 28px 24px; }
 
