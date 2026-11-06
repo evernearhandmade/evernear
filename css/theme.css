@@ -24,8 +24,8 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
   color: var(--text);
   background: var(--off-white);
 }
@@ -954,7 +954,7 @@ button { cursor: pointer; }
   text-transform: uppercase;
   color: var(--taupe);
   margin-bottom: 14px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Jost', sans-serif;
 }
 .pp-name {
   font-family: 'Cormorant Garamond', serif;
@@ -977,7 +977,7 @@ button { cursor: pointer; }
   text-transform: uppercase;
   color: var(--taupe);
   margin-bottom: 12px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Jost', sans-serif;
 }
 .pp-sizes {
   display: flex;
@@ -994,7 +994,7 @@ button { cursor: pointer; }
   color: var(--text);
   cursor: pointer;
   transition: all 0.2s;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Jost', sans-serif;
 }
 .size-btn.selected, .size-btn:hover {
   background: var(--heading);
@@ -1014,7 +1014,7 @@ button { cursor: pointer; }
   text-transform: uppercase;
   color: var(--taupe);
   margin-bottom: 8px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Jost', sans-serif;
 }
 .pp-dimensions {
   font-size: 0.95rem;
@@ -1036,7 +1036,7 @@ button { cursor: pointer; }
   text-transform: uppercase;
   color: var(--taupe);
   margin-bottom: 10px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Jost', sans-serif;
 }
 .pp-custom-text-input {
   width: 100%;
@@ -1047,7 +1047,7 @@ button { cursor: pointer; }
   color: var(--heading);
   outline: none;
   transition: border-color 0.2s;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Jost', sans-serif;
 }
 .pp-custom-text-input:focus { border-color: var(--heading); }
 .pp-custom-text-input.error { border-color: #c0392b; }
@@ -1068,7 +1068,7 @@ button { cursor: pointer; }
   border: none;
   cursor: pointer;
   transition: opacity 0.2s;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Jost', sans-serif;
   font-weight: 500;
 }
 .add-to-cart-btn:hover { opacity: 0.85; }
@@ -1158,7 +1158,7 @@ button { cursor: pointer; }
   color: #6b5c48;
   letter-spacing: 0.04em;
   margin-bottom: 8px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Jost', sans-serif;
 }
 .cart-shipping-bar-msg strong { color: #3d2f20; font-weight: 500; }
 .cart-shipping-bar-msg.unlocked { color: #4a7c59; font-weight: 500; }
@@ -1200,7 +1200,7 @@ button { cursor: pointer; }
   color: var(--heading);
   cursor: pointer;
   transition: all 0.2s;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Jost', sans-serif;
 }
 .cart-drawer-empty button:hover { background: var(--heading); color: var(--off-white); }
 .cart-item {
@@ -1288,7 +1288,7 @@ button { cursor: pointer; }
   margin-top: 6px;
   transition: color 0.2s;
   align-self: flex-start;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Jost', sans-serif;
 }
 .cart-item-remove:hover { color: var(--heading); }
 .cart-drawer-footer {
@@ -1328,7 +1328,7 @@ button { cursor: pointer; }
   border: none;
   cursor: pointer;
   transition: opacity 0.2s;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Jost', sans-serif;
   font-weight: 500;
 }
 .cart-checkout-btn:hover { opacity: 0.85; }
