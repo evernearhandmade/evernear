@@ -47,7 +47,7 @@ function openProduct(handle) {
 
   document.getElementById('pp-collection').textContent = collectionName;
   document.getElementById('pp-name').textContent = p.title;
-  document.getElementById('pp-price').textContent = p.priceDisplay || p.price;
+  document.getElementById('pp-price').innerHTML = priceTextHtml(p.priceDisplay || p.price);
   document.getElementById('pp-description').innerHTML = p.descriptionHtml || p.description;
 
   // Dimensions and details
@@ -125,7 +125,7 @@ function openProduct(handle) {
         if (v.selectedOptions.every(function(o) { return selections[o.name] === o.value; })) match = v;
       });
       window.currentSelectedVariant = match;
-      if (match) document.getElementById('pp-price').textContent = formatMoney(match.price.amount, match.price.currencyCode);
+      if (match) document.getElementById('pp-price').innerHTML = priceHtml(match.price.amount, match.price.currencyCode);
     }
 
     if (isOnlySize) {
@@ -147,7 +147,7 @@ function openProduct(handle) {
         btn.onclick = function() {
           sizesEl.querySelectorAll('.size-btn').forEach(function(b) { b.classList.remove('selected'); });
           btn.classList.add('selected');
-          if (v) document.getElementById('pp-price').textContent = formatMoney(v.price.amount, v.price.currencyCode);
+          if (v) document.getElementById('pp-price').innerHTML = priceHtml(v.price.amount, v.price.currencyCode);
           window.currentSelectedVariant = v;
         };
         sizesEl.appendChild(btn);

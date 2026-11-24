@@ -126,7 +126,7 @@ async function loadEveningBags() {
           '<div class="evening-product-info">' +
           '<span class="evening-product-name">' + p.title + '</span>' +
           (variantLabel ? '<span class="evening-product-variant">' + variantLabel + '</span>' : '') +
-          '<span class="evening-product-price">' + normalized.priceDisplay + '</span>' +
+          '<span class="evening-product-price">' + priceTextHtml(normalized.priceDisplay) + '</span>' +
           '</div>' +
           '</a>';
       });

@@ -199,14 +199,15 @@ function updateShippingBar(total) {
   var pct = Math.min(100, Math.round(total / FREE_SHIPPING_THRESHOLD * 100));
   fill.style.width = pct + '%';
 
+  var saleNote = saleActive ? SALE.percentOff + '% off applied at checkout · ' : '';
   if (rem <= 0) {
     msg.className = 'cart-shipping-bar-msg unlocked';
     msg.innerHTML = '✦ You\'ve unlocked free shipping!';
-    if (note) note.textContent = 'Free shipping applied at checkout';
+    if (note) note.textContent = saleNote + 'Free shipping applied at checkout';
   } else {
     msg.className = 'cart-shipping-bar-msg';
-    msg.innerHTML = 'You\'re <strong>$' + rem + '</strong> away from free shipping';
-    if (note) note.textContent = 'Shipping calculated at checkout';
+    msg.innerHTML = 'You\'re <strong>' + saleMoney(rem, 'USD') + '</strong> away from free shipping';
+    if (note) note.textContent = saleNote + 'Shipping calculated at checkout';
   }
 }
 
@@ -235,7 +236,7 @@ function renderCartDrawer() {
   var html = '';
   cart.forEach(function(item, idx) {
     var itemTotal = (parseFloat(item.price) * item.quantity);
-    var priceStr = formatMoney(itemTotal, item.currencyCode);
+    var priceStr = priceHtml(itemTotal, item.currencyCode);
     var variantLabel = item.variantTitle && item.variantTitle !== 'Default Title' ? item.variantTitle : '';
 
     html += '<div class="cart-item">';
@@ -272,8 +273,9 @@ function renderCartDrawer() {
 
   itemsEl.innerHTML = html;
   footerEl.style.display = '';
-  subtotalEl.textContent = formatMoney(getCartTotal(), 'USD');
-  updateShippingBar(getCartTotal());
+  var total = getCartTotal();
+  subtotalEl.innerHTML = priceHtml(total, 'USD');
+  updateShippingBar(saleActive ? salePrice(total) : total);
 }
 
 // ── Checkout ──
