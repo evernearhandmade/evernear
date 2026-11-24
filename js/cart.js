@@ -25,6 +25,19 @@ function getCartTotal() {
   }, 0);
 }
 
+function isCartItemExcluded(item) {
+  return !!item.saleExcluded || isSaleExcluded({ handle: item.productHandle });
+}
+
+function cartItemSaleTotal(item) {
+  var total = parseFloat(item.price) * item.quantity;
+  return saleActive && !isCartItemExcluded(item) ? salePrice(total) : total;
+}
+
+function getCartSaleTotal() {
+  return getCart().reduce(function(sum, item) { return sum + cartItemSaleTotal(item); }, 0);
+}
+
 function getCartCount() {
   return getCart().reduce(function(sum, item) {
     return sum + item.quantity;
@@ -118,6 +131,7 @@ function addToCart() {
       quantity: 1,
       image: image,
       customText: customText || undefined,
+      saleExcluded: isSaleExcluded(p) || undefined,
     });
   }
 
@@ -188,7 +202,7 @@ function toggleCart() {
 
 var FREE_SHIPPING_THRESHOLD = 70;
 
-function updateShippingBar(total) {
+function updateShippingBar(total, discounted) {
   var bar = document.getElementById('cart-shipping-bar');
   var msg = document.getElementById('cart-shipping-bar-msg');
   var fill = document.getElementById('cart-shipping-fill');
@@ -199,7 +213,7 @@ function updateShippingBar(total) {
   var pct = Math.min(100, Math.round(total / FREE_SHIPPING_THRESHOLD * 100));
   fill.style.width = pct + '%';
 
-  var saleNote = saleActive ? SALE.percentOff + '% off applied at checkout · ' : '';
+  var saleNote = discounted ? SALE.percentOff + '% off applied at checkout · ' : '';
   if (rem <= 0) {
     msg.className = 'cart-shipping-bar-msg unlocked';
     msg.innerHTML = '✦ You\'ve unlocked free shipping!';
@@ -236,7 +250,7 @@ function renderCartDrawer() {
   var html = '';
   cart.forEach(function(item, idx) {
     var itemTotal = (parseFloat(item.price) * item.quantity);
-    var priceStr = priceHtml(itemTotal, item.currencyCode);
+    var priceStr = wasNowHtml(itemTotal, cartItemSaleTotal(item), item.currencyCode);
     var variantLabel = item.variantTitle && item.variantTitle !== 'Default Title' ? item.variantTitle : '';
 
     html += '<div class="cart-item">';
@@ -274,8 +288,9 @@ function renderCartDrawer() {
   itemsEl.innerHTML = html;
   footerEl.style.display = '';
   var total = getCartTotal();
-  subtotalEl.innerHTML = priceHtml(total, 'USD');
-  updateShippingBar(saleActive ? salePrice(total) : total);
+  var saleTotal = getCartSaleTotal();
+  subtotalEl.innerHTML = wasNowHtml(total, saleTotal, 'USD');
+  updateShippingBar(saleTotal, saleTotal < total);
 }
 
 // ── Checkout ──

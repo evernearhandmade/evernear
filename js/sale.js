@@ -4,7 +4,17 @@ var SALE = {
   percentOff: 30,
   start: new Date('2026-11-23T22:00:00-08:00'),
   end: new Date('2026-12-01T00:00:00-08:00'),
+  excludedCollections: ['custom'],
+  excludedHandles: ['le-voyage-custom-embroidered-quilted-cosmetic-bag'],
 };
+
+function isSaleExcluded(product) {
+  if (!product) return false;
+  if (SALE.excludedHandles.indexOf(product.handle) >= 0) return true;
+  return (product.collections || []).some(function(c) {
+    return SALE.excludedCollections.indexOf(c.handle) >= 0;
+  });
+}
 
 // ?sale=preview turns the sale on for this browser tab before it starts; ?sale=off turns the preview off.
 var saleActive = (function() {
@@ -35,20 +45,26 @@ function salePrice(amount) {
   return Math.round(parseFloat(amount) * (100 - SALE.percentOff)) / 100;
 }
 
-function priceHtml(amount, currencyCode, prefix) {
+function wasNowHtml(was, now, currencyCode, prefix) {
   prefix = prefix || '';
-  if (!saleActive) return prefix + saleMoney(amount, currencyCode);
-  return prefix + '<s class="price-was">' + saleMoney(amount, currencyCode) + '</s> ' +
-    '<span class="price-now">' + saleMoney(salePrice(amount), currencyCode) + '</span>';
+  if (!(now < was)) return prefix + saleMoney(was, currencyCode);
+  return prefix + '<s class="price-was">' + saleMoney(was, currencyCode) + '</s> ' +
+    '<span class="price-now">' + saleMoney(now, currencyCode) + '</span>';
+}
+
+// Pass the product so excluded items keep their regular price.
+function priceHtml(amount, currencyCode, prefix, product) {
+  var now = saleActive && !isSaleExcluded(product) ? salePrice(amount) : parseFloat(amount);
+  return wasNowHtml(parseFloat(amount), now, currencyCode, prefix);
 }
 
 // For prices already formatted as text, like "$46" or "From $45".
-function priceTextHtml(text) {
+function priceTextHtml(text, product) {
   text = text || '';
-  if (!saleActive) return text;
+  if (!saleActive || isSaleExcluded(product)) return text;
   var m = String(text).match(/^(.*?)\$([\d,]+(?:\.\d+)?)\s*$/);
   if (!m) return text;
-  return priceHtml(m[2].replace(/,/g, ''), 'USD', m[1]);
+  return priceHtml(m[2].replace(/,/g, ''), 'USD', m[1], product);
 }
 
 if (saleActive) {

@@ -74,7 +74,7 @@ async function loadHomepageProducts() {
         '<div class="newest-card-img">' + imgHtml + '</div>' +
         '<span class="newest-card-line" style="color:' + lineColor + '">' + lineLabel + '</span>' +
         '<span class="newest-card-name">' + p.title + '</span>' +
-        '<span class="newest-card-price">' + priceTextHtml(normalized.priceDisplay) + '</span>';
+        '<span class="newest-card-price">' + priceTextHtml(normalized.priceDisplay, normalized) + '</span>';
 
       card.addEventListener('click', function(e) {
         e.preventDefault();

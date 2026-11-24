@@ -85,7 +85,7 @@ function buildProductCard(product) {
 
   // Product info
   var sizesText = product.sizesDisplay || '';
-  var priceText = priceTextHtml(product.priceDisplay);
+  var priceText = priceTextHtml(product.priceDisplay, product);
   var infoHtml = '<div class="product-info">';
   infoHtml += '<div class="product-meta-row">';
   infoHtml += '<span class="product-sizes">' + sizesText + '</span>';
