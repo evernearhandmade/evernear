@@ -60,6 +60,7 @@ html.sale-active .announce-bar:not(.announce-bar--sale) { display: none; }
 
 .price-was { color: var(--taupe); font-weight: 400; margin-right: 2px; }
 .price-now { color: #A1453B; font-weight: 500; }
+.pp-sale-note { margin: -18px 0 26px; font-size: 12px; letter-spacing: 0.06em; color: var(--taupe); font-style: italic; }
 
 /* ── Header ── */
 .site-header {

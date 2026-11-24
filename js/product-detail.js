@@ -48,6 +48,16 @@ function openProduct(handle) {
   document.getElementById('pp-collection').textContent = collectionName;
   document.getElementById('pp-name').textContent = p.title;
   document.getElementById('pp-price').innerHTML = priceTextHtml(p.priceDisplay || p.price, p);
+
+  var saleNote = document.getElementById('pp-sale-note');
+  if (!saleNote) {
+    saleNote = document.createElement('p');
+    saleNote.id = 'pp-sale-note';
+    saleNote.className = 'pp-sale-note';
+    saleNote.textContent = 'Not included in the Black Friday sale';
+    document.getElementById('pp-price').after(saleNote);
+  }
+  saleNote.style.display = saleActive && isSaleExcluded(p) ? '' : 'none';
   document.getElementById('pp-description').innerHTML = p.descriptionHtml || p.description;
 
   // Dimensions and details
